@@ -342,3 +342,161 @@ footer {
   text-align: center;
   padding: 25px 0;
 }
+
+/* ======================================= */
+/* MEDIA QUERIES UNTUK RESPONSIVITAS (Wajib) */
+/* ======================================= */
+
+/* Untuk Tablet dan Layar Lebih Kecil (Max Width 992px) */
+@media (max-width: 992px) {
+  /* Navbar Adjustment */
+  .nav-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .nav-links {
+    position: static;
+    transform: none;
+    justify-content: center;
+    width: 100%;
+  }
+  .nav-links li a {
+    font-size: 0.9em;
+  }
+  .nav-cta-area {
+    position: static;
+    width: auto;
+  }
+
+  /* HERO Section Adjustment */
+  .hero {
+    padding: 60px 0;
+  }
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-text {
+    order: 2; /* Teks di bawah gambar di mobile */
+    padding-top: 30px;
+  }
+
+  .hero-image-container {
+    order: 1; /* Gambar di atas teks di mobile */
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero-image.slideshow-images {
+    width: 300px;
+    height: 300px;
+  }
+
+  .hero h1 {
+    font-size: 2.8em;
+  }
+  .hero h2 {
+    font-size: 1.4em;
+  }
+
+  /* Section Umum */
+  .section h3 {
+    font-size: 2em;
+    margin-bottom: 40px;
+  }
+
+  /* Riwayat & Galeri */
+  .riwayat-grid {
+    grid-template-columns: 1fr; /* Satu kolom untuk riwayat */
+  }
+}
+
+/* Untuk Mobile (Max Width 600px) */
+@media (max-width: 600px) {
+  /* Navbar */
+  .nav-links {
+    flex-direction: column; /* Menu disusun vertikal */
+    gap: 10px;
+  }
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  /* HERO Section */
+  .hero {
+    padding: 40px 0;
+    min-height: auto;
+  }
+  .hero h1 {
+    font-size: 2.2em;
+  }
+  .hero h2 {
+    font-size: 1.2em;
+  }
+
+  .hero-image-container {
+    width: 250px;
+    height: 250px;
+  }
+  .hero-image.slideshow-images {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* Table Responsif */
+  .metrics-table,
+  .metrics-table thead,
+  .metrics-table tbody,
+  .metrics-table th,
+  .metrics-table td,
+  .metrics-table tr {
+    display: block; /* Memaksa elemen tabel menjadi blok */
+  }
+
+  .metrics-table thead tr {
+    position: absolute;
+    top: -9999px; /* Sembunyikan header asli */
+    left: -9999px;
+  }
+
+  .metrics-table tr {
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+
+  .metrics-table td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .metrics-table td:before {
+    /* Gunakan atribut data untuk label header */
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    text-align: left;
+    color: #2a5298;
+  }
+
+  /* Galeri */
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Satu kolom */
+  }
+
+  /* Form */
+  .contact-form {
+    padding: 20px;
+  }
+}
+
+/* Untuk membuat Table responsif (Data Labels) */
+/* Perlu modifikasi kecil di HTML table agar ini berfungsi */
+/* --- Lihat bagian catatan di bawah --- */
