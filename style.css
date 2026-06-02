@@ -417,6 +417,35 @@ footer {
     font-size: 1.4em;
   }
 
+
+
+/* Bungkus luar untuk mengatur posisi dan jarak */
+.social-container {
+    display: flex;
+    gap: 24px; /* Jarak antar ikon */
+    justify-content: center; /* Supaya posisinya di tengah */
+    align-items: center;
+    padding: 20px;
+  }
+
+  /* Mengatur ukuran dan warna SVG */
+.social-link {
+    color: #4a5568; /* Warna abu-abu gelap yang kalem (aesthetic) */
+    display: inline-block;
+    transition: all 0.25s ease-in-out; /* Animasi transisi yang smooth */
+  }
+
+  /* Ukuran kotak SVG */
+.social-link svg {
+    width: 28px;  /* Ukuran lebar ikon */
+    height: 28px; /* Ukuran tinggi ikon */
+  }
+
+  /* Efek interaktif saat kursor mendekat (Hover) */
+.social-link:hover {
+    color: #000000; /* Berubah jadi warna hitam pekat */
+    transform: translateY(-4px); /* Efek sedikit melayang ke atas */
+  }
 /* modal  */
 #porto-overlay {
   display: none;
