@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
+
 <body>
 
     <nav class="navbar">
@@ -117,16 +118,16 @@
                             <td colspan="2" data-label="Pencapaian">
                                 <div class="container">
                                     <div class="gallery-grid">
-                                        <div class="portofolio-gallery">
-                                            <img src="/img/desember.jpeg" alt="Hasil Iklan Terbaik">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="/img/desember.jpeg" alt="Hasil Iklan Desember">
                                         </div>
-                                        <div class="portofolio-gallery">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
                                             <img src="/img/januari.jpeg" alt="Kreatif Iklan">
                                         </div>
-                                        <div class="portofolio-gallery">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
                                             <img src="/img/november.jpeg" alt="Kreatif Iklan">
                                         </div>
-                                        <div class="portofolio-gallery">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/agustus.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
                                             <img src="/img/agustus.jpeg" alt="Kreatif Iklan">
                                         </div>
                                     </div>
@@ -252,5 +253,12 @@
     </footer>
 
     <script src="script.js"></script>
+    <!-- <div id="porto-overlay">
+        <div id="porto-modal">
+            <button id="porto-close" onclick="document.getElementById('porto-overlay').style.display='none'">✕</button>
+            <img id="porto-modal-img" src="" alt="Preview">
+            <p id="porto-modal-caption"></p>
+        </div>
+    </div> -->
 </body>
 </html>
