@@ -139,6 +139,88 @@ body {
   display: inline-block;
 }
 
+
+/* Styling Kontainer Utama (Card) */
+.card-pengalaman {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  max-width: 500px; /* Sesuaikan dengan kebutuhan layoutmu */
+  margin: 20px auto;
+  font-family: sans-serif;
+  display: none;
+}
+
+.card-pengalaman h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Bungkus luar mirip border tabel */
+.table-box {
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Baris "Tabel" */
+.table-row {
+  display: grid;
+  grid-template-columns: 1fr; /* Default untuk HP: Tumpuk ke bawah */
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-row:last-child {
+  border-bottom: none; /* Hilangkan border di baris terakhir */
+}
+
+/* Kolom Kiri (Label) & Kolom Kanan (Konten) */
+.table-label, .table-content {
+  padding: 16px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.table-label {
+  color: #1d4ed8; /* Warna biru tulisan */
+  font-weight: bold;
+  background-color: #f8fafc; /* Efek background tipis untuk pemisah */
+  text-align: center; /* Supaya labelnya di tengah */
+}
+
+.table-content {
+  color: #334155;
+  text-align: justify; /* Supaya teks rata kiri, gak berantakan */
+  
+}
+
+/* RESPONSIVE LAYOUT (Untuk Layar Tablet & Laptop) */
+@media (min-width: 480px) {
+  .table-row {
+    grid-template-columns: 150px 1fr; /* Di laptop: Kolom kiri 150px, kanan sisa layarnya */
+  }
+  
+  .table-label {
+    border-right: 1px solid #e2e8f0; /* Garis pembatas vertikal hanya muncul di desktop */
+    background-color: transparent; /* Opsional: hilangkan bg di desktop jika mau */
+  }
+  .table-content {
+  color: #334155;
+  
+}
+}
+
+@media (max-width: 767px) {
+  .card-pengalaman {
+    display: block; /* Sembunyikan card pengalaman di layar besar */
+  }
+
+}
+
+
+
 /* GALERI SECTION STYLES */
 
 .gallery-section {
@@ -254,6 +336,12 @@ video {
   border-radius: 10px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   margin-bottom: 40px;
+  display: block;
+}
+@media (max-width: 767px) {
+  .case-study {
+    display: none; /* Sembunyikan case study di layar kecil */
+  }
 }
 
 .metrics-table {

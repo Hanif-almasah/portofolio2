@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio CV Hanif Almasah</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -29,7 +31,7 @@
     <header id="home" class="hero">
     <div class="container hero-content">
         <div class="hero-text">
-            <h1>Hello, I'm Hanif!</h1>
+            <h1>Hello, Saya Hanif</h1>
             <h2>Meta Advertiser</h2>
             <div class="social-container">
                 <a href="https://github.com/Hanif-almasah" target="_blank" aria-label="GitHub" class="social-link">
@@ -103,64 +105,111 @@
         <div class="container">
            
             <div class="case-study">
-                <h2>Keahlian</h2>
+                <h2  style="text-align: center; padding: 0 0 20px 0;">Pengalaman</h2>
                 
                 <table class="metrics-table">
                     <thead>
                         <tr>
-                            <th>Keahlian IT Support</th>
-                            <th colspan="2">Pencapaian</th>
+                            <th style="text-align: center;">Keahlian IT</th>
+                            <th colspan="2"  style="text-align: center;">Pencapaian</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Keahlian IT Support">System Administration</td>
+                            <td data-label="Keahlian IT Support" style="text-align: center;">System Administration</td>
                             
                             <td data-label="Pencapaian">Berhasil membangun, mengonfigurasi, dan mengelola arsitektur server mandiri menggunakan <strong>Debian Server</strong> untuk kebutuhan <strong>Web server, DHCP Server, DNS, dan FTP</strong>.</td>
                         </tr>
                         <tr>
-                            <td data-label="Keahlian IT Support">Network Management</td>
+                            <td data-label="Keahlian IT Support" style="text-align: center;">Network Management</td>
                             <td data-label="Pencapaian">Mahir merancang instalasi jaringan dan melakukan manajemen bandwidth menggunakan perangkat <strong>Mikrotik</strong>.</td>
                         </tr>
                         <tr>
-                            <td data-label="Keahlian IT Support">Web Development</td>
+                            <td data-label="Keahlian IT Support" style="text-align: center;">Web Development</td>
                             <td colspan="2" data-label="Pencapaian">Mahir dalam pengembangan web menggunakan bahasa pemrograman seperti HTML, CSS, JavaScript, dan PHP.</td>
                         </tr>
                         <tr>
-                            <td data-label="Keahlian IT Support">Troubleshooting</td>
+                            <td data-label="Keahlian IT Support" style="text-align: center;">Troubleshooting</td>
                             <td colspan="2" data-label="Pencapaian">Mahir dalam mendiagnosis dan menyelesaikan masalah teknis pada sistem dan jaringan. Berhasil mendiagnosis berbagai elekronik perangkat di kantor Seperti <strong>Laptop, Printer, Router.</strong></td>
+                        </tr>
+                        <tr>
+                            <td data-label="KPI" style="text-align: center;">Sertifikat</td>
+                            <td colspan="2" data-label="Pencapaian">
+                                <div class="container">
+                                    <div class="gallery-grid">
+                                        
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/Sertifikat/Siswa_terbaik.jpeg" alt="Kreatif Iklan">
+                                            <div class="caption">Siswa Terbaik Kompetensi Teknik Komputer Jaringan</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/Sertifikat/Peringkat_3.jpeg" alt="Kreatif Iklan">
+                                            <div class="caption">Peringkat 3 Kompetensi Teknik Komputer Jaringan</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/Sertifikat/Magang.jpeg" alt="Hasil Iklan Desember">
+                                            <div class="caption">Magang di Pt.DigiHerba Nusantara</div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="KPI" style="text-align: center;">Project</td>
+                            <td colspan="2" data-label="Pencapaian">
+                                <div class="container">
+                                    <div class="gallery-grid">
+                                        
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/warnet.jpg" alt="Kreatif Iklan">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/ko_san.png" alt="Kreatif Iklan">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/Smk_darussalam.jpg" alt="Hasil Iklan Desember">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
        
+            
 
          <div class="case-study">
-                <h2>Digital Marketing</h2>
+                <h2 style="text-align: center; padding: 0 0 20px 0;" >Digital Marketing</h2>
                 
                 <table class="metrics-table">
                     <thead>
                         <tr>
-                            <th>KPI (Key Performance Indicator)</th>
-                            <th colspan="2">Pencapaian</th>
+                            <th  style="text-align: center;">KPI (Key Performance Indicator)</th>
+                            <th colspan="2"  style="text-align: center;">Pencapaian</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="KPI">Revenue & Scaling</td>
+                            <td data-label="KPI"  style="text-align: center;">Revenue & Scaling</td>
                             
                             <td data-label="Pencapaian">Berhasil melakukan scaling up iklan hingga mencatatkan<strong> Omzet Tertinggi sebesar Rp203,18 Juta </strong> dalam satu bulan (Desember 2025), dengan rata-rata omzet bulanan stabil di kisaran ±Rp160 Juta</td>
                         </tr>
                         <tr>
-                            <td data-label="KPI">Efisiensi Campaign & Konversi</td>
+                            <td data-label="KPI"  style="text-align: center;">Efisiensi Campaign & Konversi</td>
                             <td data-label="Pencapaian">Sukses menjaga stabilitas kualitas traffic iklan dengan <strong>mempertahankan ROAS di angka 1.3 - 1.4 </strong> dan mendukung Closing Rate tim CS hingga menyentuh angka <strong>55.1%</strong> dan Akuisisi di angka <strong>69% - 73%</strong> (Batas dari SPV Adalah <strong>80%</strong>).</td>
                         </tr>
                         <tr>
-                            <td data-label="KPI">Technical Troubleshooting</td>
+                            <td data-label="KPI"  style="text-align: center;">Technical Troubleshooting</td>
                             <td colspan="2" data-label="Pencapaian">Berhasil mengatasi gangguan teknis pada akun iklan seperti <strong>spam</strong>, <strong>fatigue audiens</strong>, serta <strong> menjaga dan membuat konten winning untuk menjaga kontinuitas iklan.</strong></td>
                         </tr>
                         <tr>
-                            <td data-label="KPI">Team Collaboration</td>
+                            <td data-label="KPI" style="text-align: center;">Hasil Iklan</td>
                             <td colspan="2" data-label="Pencapaian">
                                 <div class="container">
                                     <div class="gallery-grid">
@@ -189,6 +238,147 @@
             
     </section>
 
+    <section id="portofolio" class="section portofolio">
+
+
+        <div class="card-pengalaman ">
+                <h2>Pengalaman</h2>
+                
+                <div class="table-box" style="text-align: justify;">
+                    <th>
+                        <div class="table-label" style="text-align: center;"><h4><strong>Keahlian IT Support</strong></h4></div>
+                    </th>
+                    <th>
+                        <div class="table-label" >System Administration</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Berhasil membangun, mengonfigurasi, dan mengelola arsitektur server mandiri menggunakan <strong>Debian Server</strong> untuk kebutuhan <strong>Web server, DHCP Server, DNS, dan FTP</strong>.</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Network Management</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Mahir merancang instalasi jaringan dan melakukan manajemen bandwidth menggunakan perangkat <strong>Mikrotik</strong>.</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Web Development</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Mahir dalam pengembangan web menggunakan bahasa pemrograman seperti HTML, CSS, JavaScript, dan PHP.</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Troubleshooting</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Mahir dalam mendiagnosis dan menyelesaikan masalah teknis pada sistem dan jaringan. Berhasil mendiagnosis berbagai elekronik perangkat di kantor Seperti <strong>Laptop, Printer, Router.</strong></div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Pencapaian</div>
+                    </th>
+                    <div class="table-row">
+                        
+                        <div class="table-content">
+                            <div class="gallery-grid">
+                                        
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/warnet.jpg" alt="Kreatif Iklan">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/ko_san.png" alt="Kreatif Iklan">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/Smk_darussalam.jpg" alt="Hasil Iklan Desember">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Sertifikat</div>
+                    </th>
+                    <div class="table-row">
+                        
+                        <div class="table-content">
+                            <div class="gallery-grid">
+                               <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/Sertifikat/Siswa_terbaik.jpeg" alt="Kreatif Iklan">
+                                            <div class="caption">Siswa Terbaik Kompetensi Teknik Komputer Jaringan</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/Sertifikat/Peringkat_3.jpeg" alt="Kreatif Iklan">
+                                            <div class="caption">Peringkat 3 Kompetensi Teknik Komputer Jaringan</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/Sertifikat/Magang.jpeg" alt="Hasil Iklan Desember">
+                                            <div class="caption">Magang di Pt.DigiHerba Nusantara</div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                       
+
+        <div class="card-pengalaman ">
+                
+                
+                <div class="table-box" style="text-align: justify;">
+                    <th>
+                        <div class="table-label" style="text-align: center;"><h4><strong>Digital Marketing</strong></h4></div>
+                    </th>
+
+                    <th>
+                        <div class="table-label" style="text-align: center;">Revenue & Scaling</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Berhasil melakukan scaling up iklan hingga mencatatkan<strong> Omzet Tertinggi sebesar Rp203,18 Juta </strong> dalam satu bulan (Desember 2025), dengan rata-rata omzet bulanan stabil di kisaran ±Rp160 Juta</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Efisiensi Campaign & Konversi</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Sukses menjaga stabilitas kualitas traffic iklan dengan <strong>mempertahankan ROAS di angka 1.3 - 1.4 </strong> dan mendukung Closing Rate tim CS hingga menyentuh angka <strong>55.1%</strong> dan Akuisisi di angka <strong>69% - 73%</strong> (Batas dari SPV Adalah <strong>80%</strong>).</div>
+                    </div>
+
+                    <th>
+                        <div class="table-label" style="text-align: center;">Technical Troubleshooting</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Berhasil mengatasi gangguan teknis pada akun iklan seperti <strong>spam</strong>, <strong>fatigue audiens</strong>, serta <strong> menjaga dan membuat konten winning untuk menjaga kontinuitas iklan.</strong></div>
+                    </div>
+
+                    <th>
+                        <div class="table-label" style="text-align: center;">Pencapaian Omzet Iklan</div>
+                    </th>
+                    <div class="table-row">
+                        
+                        <div class="table-content">
+                            <div class="gallery-grid">
+                                        
+                                         <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/desember.jpeg" alt="Hasil Iklan Desember">
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/januari.jpeg" alt="Kreatif Iklan">
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/november.jpeg" alt="Kreatif Iklan">
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/agustus.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/agustus.jpeg" alt="Kreatif Iklan">
+                                        </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="pendidikan" class="section riwayat">
         <div class="container">
             <h3>Riwayat Pendidikan & Pengalaman</h3>
@@ -258,7 +448,7 @@
         </div>
     </section>
 
-    <section id="contact" class="section contact">
+    <!-- <section id="contact" class="section contact">
         <div class="container">
             <h3>📞 Hubungi Saya</h3>
             <h4>Kerja Sama dengan saya.</h4>
@@ -290,14 +480,15 @@
             </form>
             
         </div>
-    </section>
+    </section> -->
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Hanif Almasah Portofolio CV. Dibuat dengan HTML, CSS, & JS.</p>
+            <p>&copy; 2026 Hanif Almasah Portofolio CV</p>
         </div>
     </footer>
 
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <!-- <div id="porto-overlay">
         <div id="porto-modal">
