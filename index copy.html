@@ -14,44 +14,25 @@
 
     <nav class="navbar" style="color:white;">
         <div class="container nav-content">
-            <a href="#home" class="logo"></i> Hanif Almasah</a>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links" id="navLinks">
+            <a href="#home" class="logo">Hanif Almasah</a>
+            <ul class="nav-links">
                 <li><a href="#home">HOME</a></li>
                 <li><a href="#about">ABOUT</a></li>
                 <li><a href="#portfolio">PORTFOLIO</a></li>
                 <li><a href="#pendidikan">RIWAYAT</a></li>
                 <li><a href="#gallery">GALERI</a></li>  
             </ul>
+            <div class="nav-cta-area">
+                <a href="#contact" class="nav-cta-button"><i class="fas fa-arrow-right"></i> WORK WITH ME</a>
+            </div>
         </div>
     </nav>
 
     <header id="home" class="hero">
     <div class="container hero-content" >
-        
-
-        <div class="hero-image-container">
-            <div class="hero-image slideshow-images">
-                <img src="img/profil_fix.jpeg" alt="Hanif Almasah Photo 1" class="slide active">
-            </div>
-        </div>
         <div class="hero-text">
-            <h1 style="color:rgb(255, 255, 255);">Hanif Almasah</h1>
+            <h1 style="color:white;">Hanif Almasah</h1>
             <h2 style="color:white;">Meta Advertiser</h2>
-
-            <a href="script.js" download class="btn-resume">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Download Resume
-            </a>
-
             <div class="social-container">
                 <a href="https://github.com/Hanif-almasah" target="_blank" aria-label="GitHub" class="social-link">
                     <svg viewBox="0 0 24 24" fill="white">
@@ -70,13 +51,12 @@
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/>
                     </svg>
                 </a>
-
                 </div>
                 <style>
                     .social-container {
                         display: flex; /* Menggunakan flexbox untuk tata letak horizontal */
                         gap: 24px; /* Jarak antar ikon */
-                        justify-content: center; /* Supaya posisinya di tengah */
+                        justify-content: left; /* Supaya posisinya di tengah */
                         align-items: center;
                         padding: 20px;
                     }
@@ -101,40 +81,28 @@
                     }
                 </style>
         </div>
+
+        <div class="hero-image-container">
+            <div class="hero-image slideshow-images">
+                <img src="img/profil1.jpg" alt="Hanif Almasah Photo 1" class="slide active">
+                <img src="img/profil2.jpg" alt="Hanif Almasah Photo 2" class="slide">
+            </div>
+        </div>
     </div>
 </header>
 
     <section id="about" class="section about">
         <div class="container">
             <h3>About Me</h3>
-            <div class="about-content">
-                <div class="about-text">
-                    <p style="text-align: justify; max-width: 800px; margin: 0 auto 50px;">
+            <p style="text-align: justify; max-width: 800px; margin: 0 auto 50px;">
             Lulusan TKJ dengan predikat Siswa Terbaik yang kini berkarir di <strong>Digital Marketing</strong>.
 Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, mengelola visual kreatif, dan menjalankan <strong><i>Campaign Meta Ads</i></strong> dengan budget ratusan juta rupiah. Latar belakang teknis dari TKJ ternyata cukup membantu — saya bisa <i>troubleshoot</i> hal-hal yang biasanya jadi <i>bottleneck</i> di tim kreatif.    </p>
-       
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <h5>2+ Tahun</h5>
-                            <p>Pengalaman Digital Marketing</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h5>IT</h5>
-                            <p>Paham Dengan IT Support</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h5>Tools - AI</h5>
-                            <p>Up-to-date dengan alat dan teknologi AI</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </section>
 
 
     <section id="portfolio" class="section portfolio">
-        <h3>Pengalaman & Project</h3>
+         <h3>Pengalaman</h3>
         <div class="container">
            
              <div class="case-study">
@@ -149,55 +117,34 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
                     </thead>
                     <tbody>
                         <tr>
-                            <td data-label="Skill"  style="text-align: center;">Script Writing </td>
+                            <td data-label="KPI"  style="text-align: center;">Script Writing </td>
                             
                             <td data-label="Pencapaian">Menyusun skrip konten video pendek (Reels/TikTok) secara end-to-end — mulai dari riset topik dan tren, menentukan angle yang relevan dengan target audiens, menulis narasi, hingga menyesuaikan gaya bahasa dan hook pembuka agar konten langsung menarik perhatian dalam 3 detik pertama</td>
                         </tr>
                         <tr>
-                            <td data-label="Skill"  style="text-align: center;">Editing Konten Video</td>
+                            <td data-label="KPI"  style="text-align: center;">Editing Konten Video</td>
                             <td data-label="Pencapaian">
                                 Melakukan editing video Reels menggunakan CapCut dari pemotongan footage, penyusunan alur visual, penambahan teks/subtitle animasi, sound design (musik latar + sound effect) hingga finalisasi format sesuai spesifikasi platform (rasio 9:16, durasi optimal)
                             </td>
                         </tr>
                         <tr>
-                            <td data-label="Skill"  style="text-align: center;">Design Konten Infografis</td>
+                            <td data-label="KPI"  style="text-align: center;">Design Konten Infografis</td>
                             <td data-label="Pencapaian">
                                 Merancang konten edukatif multi-slide menggunakan Canva mulai dari penyusunan alur informasi, desain layout per slide, pemilihan tipografi dan palet warna yang konsisten dengan brand identity, hingga finalisasi aset siap posting di Instagram
                             </td>
                         </tr>
-                        <tr>
-                            <td data-label="Skill" style="text-align: center;">Sertifikat</td>
-                            <td colspan="2" data-label="Pencapaian">
-                                <div class="container">
-                                    <div class="gallery-grid">
-                                        
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Siswa_terbaik.jpeg', 'Siswa Terbaik Kompetensi Teknik Komputer Jaringan')" style="cursor:pointer">
-                                            <img src="img/poster lawas.png" alt="Kreatif Iklan">
-                                            <div class="caption">Siswa Terbaik Kompetensi Teknik Komputer Jaringan</div>
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Peringkat_3.jpeg', 'Peringkat 3 Kompetensi Teknik Komputer Jaringan')" style="cursor:pointer   ">
-                                            <img src="img/Sacha_inchi.jpeg" alt="Kreatif Iklan">
-                                            <div class="caption">Peringkat 3 Kompetensi Teknik Komputer Jaringan</div>
-                                        </div>
-                                        
-                                        
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                         
 
                         <!-- <tr>
-                            <td data-label="Skill"  style="text-align: center;">AI - Assisted Content Creation</td>
+                            <td data-label="KPI"  style="text-align: center;">AI - Assisted Content Creation</td>
                             <td data-label="Pencapaian">
                                 Memanfaatkan AI tools (Gemini & Flow) untuk mempercepat proses produksi konten — mulai dari generate ide, menyusun draft copywriting, hingga menghasilkan aset visual, kemudian menyesuaikan output AI dengan tone of voice brand sebelum dipublikasikan                            </td>
                         </tr> -->
                         <!-- <tr>
-                            <td data-label="Skill"  style="text-align: center;">Technical Troubleshooting</td>
+                            <td data-label="KPI"  style="text-align: center;">Technical Troubleshooting</td>
                             <td colspan="2" data-label="Pencapaian">Berhasil mengatasi gangguan teknis pada akun iklan seperti <strong>spam</strong>, <strong>fatigue audiens</strong>, serta <strong> menjaga dan membuat konten winning untuk menjaga kontinuitas iklan.</strong></td>
                         </tr>
                         <tr>
-                            <td data-label="Skill" style="text-align: center;">Hasil Iklan</td>
+                            <td data-label="KPI" style="text-align: center;">Hasil Iklan</td>
                             <td colspan="2" data-label="Pencapaian">
                                 <div class="container">
                                     <div class="gallery-grid">
@@ -221,51 +168,6 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
                 </table>
             </div>
 
-           <section id="video" class="section video-section bg-light" style="padding: 60px 0;">
-                <div class="container text-center">
-                    <h3 class="mb-4" style="font-weight: bold;">Featured Video / Showreel</h3>
-                    <p class="text-muted mb-5" style="max-width: 600px; margin: 0 auto; text-align: justify;">
-                        Berikut beberapa contoh video yang pernah saya buat untuk kebutuhan iklan, konten edukasi, dan branding. Video-video ini mencerminkan kemampuan saya dalam menyusun narasi visual yang menarik, mengedit dengan detail, serta menyesuaikan format sesuai platform digital.
-                    </p>
-                    
-                    <!-- Menambahkan class g-4 untuk memberikan jarak antar item di dalam grid -->
-                    <div class="row justify-content-center g-4">
-                        
-                        <!-- Video 1 -->
-                        <!-- col-lg-4 (3 kolom di monitor laptop/PC), col-md-6 (2 kolom di tablet), col-12 (1 kolom penuh di HP) -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="img/ramadansale2.mp4" type="video/mp4">
-
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                        <!-- Video 2 -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="img/Banting monitor .mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                        <!-- Video 3 -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="img/outro april.mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
             <div class="case-study">
                 <h2  style="text-align: center; padding: 0 0 20px 0;">IT Support</h2>
                 
@@ -295,20 +197,20 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
                             <td colspan="2" data-label="Pencapaian">Mahir dalam mendiagnosis dan menyelesaikan masalah teknis pada sistem dan jaringan. Berhasil mendiagnosis berbagai elekronik perangkat di kantor Seperti <strong>Laptop, Printer, Router.</strong></td>
                         </tr>
                         <tr>
-                            <td data-label="Skill" style="text-align: center;">Sertifikat</td>
+                            <td data-label="KPI" style="text-align: center;">Sertifikat</td>
                             <td colspan="2" data-label="Pencapaian">
                                 <div class="container">
                                     <div class="gallery-grid">
                                         
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Siswa_terbaik.jpeg', 'Siswa Terbaik Kompetensi Teknik Komputer Jaringan')" style="cursor:pointer">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
                                             <img src="img/Sertifikat/Siswa_terbaik.jpeg" alt="Kreatif Iklan">
                                             <div class="caption">Siswa Terbaik Kompetensi Teknik Komputer Jaringan</div>
                                         </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Peringkat_3.jpeg', 'Peringkat 3 Kompetensi Teknik Komputer Jaringan')" style="cursor:pointer   ">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
                                             <img src="img/Sertifikat/Peringkat_3.jpeg" alt="Kreatif Iklan">
                                             <div class="caption">Peringkat 3 Kompetensi Teknik Komputer Jaringan</div>
                                         </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Magang.jpeg', 'Magang di Pt.DigiHerba Nusantara')" style="cursor:pointer">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
                                             <img src="img/Sertifikat/Magang.jpeg" alt="Hasil Iklan Desember">
                                             <div class="caption">Magang di Pt.DigiHerba Nusantara</div>
                                         </div>
@@ -318,22 +220,22 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
                             </td>
                         </tr>
                         <tr>
-                            <td data-label="Skill" style="text-align: center;">Project</td>
+                            <td data-label="KPI" style="text-align: center;">Project</td>
                             <td colspan="2" data-label="Pencapaian">
                                 <div class="container">
                                     <div class="gallery-grid">
                                         
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/warnet.jpg', 'Pembuatan Website Warnet (Warung Internet)')" style="cursor:pointer">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
                                             <img src="img/warnet.jpg" alt="Kreatif Iklan">
-                                            <div class="caption">Membuat Website Warnet (Warung Internet)</div>
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
                                         </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Membuat Website Ko-san(Kotak Saran)')" style="cursor:pointer   ">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
                                             <img src="img/ko_san.png" alt="Kreatif Iklan">
-                                            <div class="caption">Membuat Website Ko-san(Kotak Saran)</div>
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
                                         </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Smk_darussalam.jpg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
                                             <img src="img/Smk_darussalam.jpg" alt="Hasil Iklan Desember">
-                                            <div class="caption">Membuat Website profile Sekolah </div>
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
                                         </div>
                                         
                                     </div>
@@ -343,7 +245,157 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
                     </tbody>
                 </table>
             </div>
+       
+            
+
+        
         </div>
+        </div>
+
+            
+    </section>
+
+    <section id="portofolio" class="section portofolio">
+
+        <div class="card-pengalaman ">
+                
+                
+                <div class="table-box" style="text-align: justify;">
+                    <th>
+                        <div class="table-label" style="text-align: center;"><h4><strong>Digital Marketing</strong></h4></div>
+                    </th>
+
+                    <th>
+                        <div class="table-label" style="text-align: center;">Revenue & Scaling</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Berhasil melakukan scaling up iklan hingga mencatatkan<strong> Omzet Tertinggi sebesar Rp203,18 Juta </strong> dalam satu bulan (Desember 2025), dengan rata-rata omzet bulanan stabil di kisaran ±Rp160 Juta</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Efisiensi Campaign & Konversi</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Sukses menjaga stabilitas kualitas traffic iklan dengan <strong>mempertahankan ROAS di angka 1.3 - 1.4 </strong> dan mendukung Closing Rate tim CS hingga menyentuh angka <strong>55.1%</strong> dan Akuisisi di angka <strong>69% - 73%</strong> (Batas dari SPV Adalah <strong>80%</strong>).</div>
+                    </div>
+
+                    <th>
+                        <div class="table-label" style="text-align: center;">Technical Troubleshooting</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Berhasil mengatasi gangguan teknis pada akun iklan seperti <strong>spam</strong>, <strong>fatigue audiens</strong>, serta <strong> menjaga dan membuat konten winning untuk menjaga kontinuitas iklan.</strong></div>
+                    </div>
+
+                    <th>
+                        <div class="table-label" style="text-align: center;">Pencapaian Omzet Iklan</div>
+                    </th>
+                    <div class="table-row">
+                        
+                        <div class="table-content">
+                            <div class="gallery-grid">
+                                        
+                                         <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/desember.jpeg" alt="Hasil Iklan Desember">
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/januari.jpeg" alt="Kreatif Iklan">
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/november.jpeg" alt="Kreatif Iklan">
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/agustus.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/agustus.jpeg" alt="Kreatif Iklan">
+                                        </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-pengalaman ">
+                <h2>Pengalaman</h2>
+                
+                <div class="table-box" style="text-align: justify;">
+                    <th>
+                        <div class="table-label" style="text-align: center;"><h4><strong>Keahlian IT Support</strong></h4></div>
+                    </th>
+                    <th>
+                        <div class="table-label" >System Administration</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Berhasil membangun, mengonfigurasi, dan mengelola arsitektur server mandiri menggunakan <strong>Debian Server</strong> untuk kebutuhan <strong>Web server, DHCP Server, DNS, dan FTP</strong>.</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Network Management</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Mahir merancang instalasi jaringan dan melakukan manajemen bandwidth menggunakan perangkat <strong>Mikrotik</strong>.</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Web Development</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Mahir dalam pengembangan web menggunakan bahasa pemrograman seperti HTML, CSS, JavaScript, dan PHP.</div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Troubleshooting</div>
+                    </th>
+                    <div class="tabel-row">
+                        <div class="table-content">Mahir dalam mendiagnosis dan menyelesaikan masalah teknis pada sistem dan jaringan. Berhasil mendiagnosis berbagai elekronik perangkat di kantor Seperti <strong>Laptop, Printer, Router.</strong></div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Pencapaian</div>
+                    </th>
+                    <div class="table-row">
+                        
+                        <div class="table-content">
+                            <div class="gallery-grid">
+                                        
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/warnet.jpg" alt="Kreatif Iklan">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/ko_san.png" alt="Kreatif Iklan">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/Smk_darussalam.jpg" alt="Hasil Iklan Desember">
+                                            <div class="caption">INI SERUUUUU!!!!!</div>
+                                        </div>
+                                        
+                            </div>
+                        </div>
+                    </div>
+                    <th>
+                        <div class="table-label" style="text-align: center;">Sertifikat</div>
+                    </th>
+                    <div class="table-row">
+                        
+                        <div class="table-content">
+                            <div class="gallery-grid">
+                               <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
+                                            <img src="img/Sertifikat/Siswa_terbaik.jpeg" alt="Kreatif Iklan">
+                                            <div class="caption">Siswa Terbaik Kompetensi Teknik Komputer Jaringan</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
+                                            <img src="img/Sertifikat/Peringkat_3.jpeg" alt="Kreatif Iklan">
+                                            <div class="caption">Peringkat 3 Kompetensi Teknik Komputer Jaringan</div>
+                                        </div>
+                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
+                                            <img src="img/Sertifikat/Magang.jpeg" alt="Hasil Iklan Desember">
+                                            <div class="caption">Magang di Pt.DigiHerba Nusantara</div>
+                                        </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                       
+
+        
     </section>
     <section id="pendidikan" class="section riwayat">
         <div class="container">
@@ -378,37 +430,37 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
     <section id="gallery" class="section gallery-section">
         <div class="container">
             <h3>📸 Galeri Visual</h3>
-            <p class="gallery-description">every moment captured through my lens.</p>
+            <p class="gallery-description">Kumpulan hasil Memotret Pake Kamera analog.</p>
 
             <div class="gallery-grid">
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                <div class="gallery-item">
                     <img src="img/1.jpg" alt="Hasil Iklan Terbaik">
-                    <div class="caption">Ultahhhh 20+ (MAKASIHHTEMAN-TEMANN!!!)</div>
+                    <div class="caption">INI SERUUUUU!!!!!</div>
                 </div>
 
+                <div class="gallery-item">
+                    <img src="img/2.jpg" alt="Kreatif Iklan">
+                    <div class="caption">INI LUCU BANGETTT!</div>
+                </div>
 
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                <div class="gallery-item">
                     <img src="img/3.jpg" alt="Foto Bekerja">
                     <div class="caption">Hari Batik (FujiFilm 200)</div>
                 </div>
 
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                <div class="gallery-item">
                     <img src="img/4.jpg" alt="Hobi Foto">
-                    <div class="caption">Blok M With prenn </div>
+                    <div class="caption">Memotret Foto (Salah satu minat saya)</div>
                 </div>
 
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                <div class="gallery-item">
                     <img src="img/5.jpg" alt="Hobi Foto">
-                    <div class="caption">RoofTop Gaplek</div>
+                    <div class="caption">RoofTop Gaplek(Kapan Lagiii)</div>
                 </div>
 
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                <div class="gallery-item">
                     <img src="img/6.jpg" alt="Hobi Foto">
                     <div class="caption">Mie Ayam🤤</div>
-                </div>
-                 <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/Seruuu.jpeg" alt="Foto Bekerja">
-                    <div class="caption">Jalan Jalan Ke-Senen(senenyan city)</div>
                 </div>
             </div>
         </div>
