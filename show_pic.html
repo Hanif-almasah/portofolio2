@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Video Portofolio</title>
+    <link rel="stylesheet" href="style.css" class="css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <nav class="navbar" style="color:white;">
+        <div class="container nav-content">
+            <a href="#home" class="logo"></i> Hanif Almasah</a>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#home">HOME</a></li>
+                <li><a href="index.html#about">ABOUT</a></li>
+                <li><a href="index.html#portfolio">PORTFOLIO</a></li>
+                <li><a href="index.html#pendidikan">RIWAYAT</a></li>
+                <li><a href="show_video.html">VIDEO</a></li>  
+                <li><a href="show_pic.html">GAMBAR</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section id="gallery" class="section gallery-section">
+        <div class="container">
+            <h3>Portofolio</h3>
+            <p class="gallery-description">every poster i created</p>
+
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                    <img src="img/poster lawas.png" alt="Kreatif Iklan">
+                    <div class="caption">Poster Ads Generos</div>
+                </div>
+
+                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                    <img src="img/Sacha_inchi.jpeg" alt="Kreatif Iklan">
+                    <div class="caption">Poster Feed Untuk Product Sacha Inchi</div>
+                </div>
+
+                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                    <img src="img/APA IYA.png" alt="Hobi Foto">
+                    <div class="caption">Poster Harga Dan Manfaat Generos </div>
+                </div>
+
+                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                    <img src="img/10manfaat osteoporosis.png" alt="Hobi Foto">
+                    <div class="caption">Manfaat RoyalFlakes</div>
+                </div>
+
+                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                    <img src="img/BAYU.jpg" alt="Hobi Foto">
+                    <div class="caption">Poster Harga Generos</div>
+                </div>
+                 <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
+                    <img src="img/ginelaSkin.png" alt="Foto Bekerja">
+                    <div class="caption">Poster Kandungan Ginela</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <footer>
+        <div class="container">
+            <p>&copy; 2026 Hanif Almasah Portofolio CV</p>
+        </div>
+    </footer>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!-- <div id="porto-overlay">
+</body>
+</html>
