@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <button id="porto-close">✕</button>
             <img id="porto-modal-img" src="" alt="Preview">
             <p id="porto-modal-caption"></p>
+            <p id="porto-modal-desc"></p>
         </div>
     `;
     document.body.appendChild(portoOverlay);
@@ -105,13 +106,15 @@ document.addEventListener('DOMContentLoaded', function() {
 // ==========================================
 // HELPER FUNCTION FOR OPENING MODAL
 // ==========================================
-function openPortoModal(src, caption) {
+function openPortoModal(src, caption, desc) {
     const overlay = document.getElementById('porto-overlay');
     if (!overlay) return;
     const img = document.getElementById('porto-modal-img');
     const cap = document.getElementById('porto-modal-caption');
+    const descEl = document.getElementById('porto-modal-desc');
     img.src = src;
     cap.textContent = caption || '';
+    descEl.textContent = desc || '';
     overlay.style.display = 'flex';
 }
 

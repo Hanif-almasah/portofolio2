@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio CV Hanif Almasah</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
@@ -14,7 +13,7 @@
 
     <nav class="navbar" style="color:white;">
         <div class="container nav-content">
-            <a href="#home" class="logo"></i> Hanif Almasah</a>
+            <a href="#home" class="logo">Hanif Almasah</a>
             <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -45,7 +44,7 @@
             <h2 style="color:white;">Meta Advertiser</h2>
 
             <a href="files/CV_Hanif_Almasah.pdf" download class="btn-resume">
-                <svg viewBox="0 0 26 26" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
                     <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
                     <polyline points="7 10 12 15 17 10"/>
                     <line x1="12" y1="15" x2="12" y2="3"/>
@@ -169,14 +168,10 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
                         <tr>
                             <td data-label="Skill" style="text-align: center;">Konten Infografis dan Reels Video</td>
                             <td colspan="2" data-label="Pengalaman">
-                                <td data-label="Pengalaman">
+                                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
                                     <a href="show_pic.html" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Lihat Gambar </a>
-                                 </td>
-                                        
-                                <td data-label="Pengalaman">
                                     <a href="show_video.html" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Lihat Video </a>
-                                </td>
-                               
+                                </div>
                             </td>
                         </tr>
                          
@@ -273,7 +268,7 @@ Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, 
                                 <div class="container">
                                     <div class="gallery-grid">
                                         
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/warnet.jpg', 'Pembuatan Website Warnet (Warung Internet)')" style="cursor:pointer">
+                                        <div class="portofolio-gallery" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent, this.dataset.desc)" style="cursor:pointer" data-desc="Website War_Net&#10;Website untuk menampilkan dan mengelola produk/barang bekas.&#10;&#10;Tech: HTML • CSS • JavaScript • PHP&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan:&#10;• Membuat tampilan website&#10;• Membuat sistem input produk&#10;• Membuat halaman detail produk&#10;• Mengembangkan fitur sesuai kebutuhan pengguna">
                                             <img src="img/warnet.jpg" alt="Kreatif Iklan">
                                             <div class="caption">Membuat Website Warnet (Warung Internet)</div>
                                         </div>
