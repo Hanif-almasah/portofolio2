@@ -4,409 +4,250 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio CV Hanif Almasah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cv-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 
 <body>
 
-    <nav class="navbar" style="color:white;">
-        <div class="container nav-content">
-            <a href="#home" class="logo">Hanif Almasah</a>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- ============ NAVBAR ============ -->
+    <nav class="cv-navbar" id="cvNavbar">
+        <div class="cv-container cv-nav-inner">
+            <a href="#home" class="cv-logo">Hanif<span>Almasah</span></a>
+            <button class="cv-hamburger" id="cvHamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html#home">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#portfolio">PORTFOLIO</a></li>
-                <li><a href="index.html#pendidikan">RIWAYAT</a></li>
-                <li><a href="show_video.html">VIDEO</a></li>  
-                <li><a href="show_pic.html">GAMBAR</a></li>
+            <ul class="cv-nav-links" id="cvNavLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pendidikan">Riwayat</a></li>
+                <li><a href="show_video.html">Video</a></li>
+                <li><a href="show_pic.html">Galeri</a></li>
             </ul>
+            <a href="files/CV_Hanif_Almasah.pdf" download class="cv-nav-cta">Download CV</a>
         </div>
     </nav>
 
-    <header id="home" class="hero">
-    <div class="container hero-content" >
-        
+    <!-- ============ HERO ============ -->
+    <header id="home" class="cv-hero">
+        <div class="cv-container cv-hero-inner">
+            <div class="cv-hero-text reveal">
+                <p class="cv-hero-eyebrow">Digital Marketing · IT Support</p>
+                <h1 class="cv-hero-name">Hanif Almasah</h1>
+                <h2 class="cv-hero-role">Meta Advertiser Specialist</h2>
+                <p class="cv-hero-sub">
+                    Merancang strategi kampanye berbasis data, mengelola kreatif iklan,
+                    dan menjembatani dunia marketing dengan fondasi teknis yang solid.
+                </p>
+                <div class="cv-hero-actions">
+                    <a href="files/CV_Hanif_Almasah.pdf" download class="cv-btn-primary">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                    <div class="cv-social">
+                        <a href="https://github.com/Hanif-almasah" target="_blank" aria-label="GitHub" class="cv-social-link"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://instagram.com/almasa.sih" target="_blank" aria-label="Instagram" class="cv-social-link"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/hanifalmasah/" target="_blank" aria-label="LinkedIn" class="cv-social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
 
-        <div class="hero-image-container">
-            <div class="hero-image slideshow-images">
-                <img src="img/profil-formal.png" alt="Hanif Almasah " class="slide active">
+            <div class="cv-hero-photo reveal">
+                <div class="cv-photo-frame">
+                    <img src="img/profil-formal.png" alt="Hanif Almasah">
+                </div>
             </div>
         </div>
-        <div class="hero-text">
-            <h1 style="color:rgb(255, 255, 255);">Hanif Almasah</h1>
-            <h2 style="color:white;">Meta Advertiser</h2>
+        <div class="cv-hero-scroll" aria-hidden="true"><span></span></div>
+    </header>
 
-            <a href="files/CV_Hanif_Almasah.pdf" download class="btn-resume">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
-                    <polyline points="7 10 12 15 17 10"/>
-                    <line x1="12" y1="15" x2="12" y2="3"/>
-                </svg>
-                Download Resume
-            </a>
-
-            <div class="social-container">
-                <a href="https://github.com/Hanif-almasah" target="_blank" aria-label="GitHub" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="white">
-                    <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
-                    </svg>
-                </a>
-
-                <a href="https://instagram.com/almasa.sih" target="_blank" aria-label="Instagram" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="white">
-                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                    </svg>
-                </a>
-
-                <a href="https://www.linkedin.com/in/hanifalmasah/" target="_blank" aria-label="LinkedIn" class="social-link">
-                    <svg viewBox="0 0 24 24" fill="white">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0z"/>
-                    </svg>
-                </a>
-
-                </div>
-                <style>
-                    .social-container {
-                        display: flex; /* Menggunakan flexbox untuk tata letak horizontal */
-                        gap: 24px; /* Jarak antar ikon */
-                        justify-content: center; /* Supaya posisinya di tengah */
-                        align-items: center;
-                        padding: 20px;
-                    }
-
-                    /* Mengatur ukuran dan warna SVG */
-                    .social-link {
-                        color: #4a5568; /* Warna abu-abu gelap yang kalem (aesthetic) */
-                        display: inline-block;
-                        transition: all 0.25s ease-in-out; /* Animasi transisi yang smooth */
-                    }
-
-                    /* Ukuran kotak SVG */
-                    .social-link svg {
-                        width: 28px;  /* Ukuran lebar ikon */
-                        height: 28px; /* Ukuran tinggi ikon */
-                    }
-
-                    /* Efek interaktif saat kursor mendekat (Hover) */
-                    .social-link:hover {
-                        color: #000000; /* Berubah jadi warna hitam pekat */
-                        transform: translateY(-4px); /* Efek sedikit melayang ke atas */
-                    }
-                </style>
+    <!-- ============ ABOUT ============ -->
+    <section id="about" class="cv-section">
+        <div class="cv-container">
+            <h3 class="cv-section-title reveal">About Me</h3>
+            <p class="cv-about-text reveal">
+                    Lulusan TKJ dengan predikat <strong>Siswa Terbaik</strong> yang kini berkarir di
+                    <strong>Digital Marketing</strong>. Dua tahun terakhir saya habiskan untuk merancang
+                    strategi konten berbasis data, mengelola visual kreatif, dan menjalankan
+                    <strong>Campaign Meta Ads</strong> dengan budget ratusan juta rupiah. Latar belakang
+                    teknis dari TKJ membantu saya <em>troubleshoot</em> hal yang biasanya jadi
+                    <em>bottleneck</em> di tim kreatif.
+                </p>
+                <div class="cv-stats">
+                    <div class="cv-stat reveal">
+                        <span class="cv-stat-num">2+</span>
+                        <span class="cv-stat-label">Tahun Digital Marketing</span>
+                    </div>
+                    <div class="cv-stat reveal">
+                        <span class="cv-stat-num">IT</span>
+                        <span class="cv-stat-label">Paham IT Support</span>
+                    </div>
+                    <div class="cv-stat reveal">
+                        <span class="cv-stat-num">AI</span>
+                        <span class="cv-stat-label">Tools & Teknologi AI</span>
+                    </div>
+            </div>
         </div>
-    </div>
-</header>
+    </section>
 
-    <section id="about" class="section about">
-        <div class="container">
-            <h3>About Me</h3>
-            <div class="about-content">
-                <div class="about-text">
-                    <p style="text-align: justify; max-width: 800px; margin: 0 auto 50px;">
-            Lulusan TKJ dengan predikat Siswa Terbaik yang kini berkarir di <strong>Digital Marketing</strong>.
-Dua tahun terakhir saya habiskan untuk merancang strategi konten berbasis data, mengelola visual kreatif, dan menjalankan <strong><i>Campaign Meta Ads</i></strong> dengan budget ratusan juta rupiah. Latar belakang teknis dari TKJ ternyata cukup membantu — saya bisa <i>troubleshoot</i> hal-hal yang biasanya jadi <i>bottleneck</i> di tim kreatif.    </p>
-       
-                    <div class="about-highlights">
-                        <div class="highlight-item">
-                            <h5>2+ Tahun</h5>
-                            <p>Pengalaman Digital Marketing</p>
+    <!-- ============ PORTFOLIO ============ -->
+    <section id="portfolio" class="cv-section">
+        <div class="cv-container">
+            <h3 class="cv-section-title reveal">Pengalaman &amp; Project</h3>
+
+            <!-- Digital Marketing -->
+            <div class="cv-group reveal">
+                <h4 class="cv-group-title">Digital Marketing</h4>
+                <div class="cv-card-grid">
+                    <article class="cv-skill-card">
+                        <div class="cv-skill-icon"><i class="fa-solid fa-pen-nib"></i></div>
+                        <h5>Script Writing</h5>
+                        <p>Menyusun skrip Reels/TikTok end-to-end — riset tren, tentukan angle, tulis narasi, dan hook 3 detik pertama.</p>
+                    </article>
+                    <article class="cv-skill-card">
+                        <div class="cv-skill-icon"><i class="fa-solid fa-film"></i></div>
+                        <h5>Editing Video</h5>
+                        <p>Editing Reels via CapCut: potong, susun alur, teks/subtitle animasi, sound design hingga format 9:16 optimal.</p>
+                    </article>
+                    <article class="cv-skill-card">
+                        <div class="cv-skill-icon"><i class="fa-solid fa-shapes"></i></div>
+                        <h5>Design Infografis</h5>
+                        <p>Merancang konten edukatif multi-slide di Canva dengan layout, tipografi, dan palet warna konsisten brand.</p>
+                    </article>
+                    <article class="cv-skill-card cv-skill-cta">
+                        <h5>Lihat Karya</h5>
+                        <p>Kumpulan poster & video kreatif yang sudah saya produksi.</p>
+                        <div class="cv-cta-row">
+                            <a href="show_pic.html" class="cv-btn-ghost">Gambar</a>
+                            <a href="show_video.html" class="cv-btn-ghost">Video</a>
                         </div>
-                        <div class="highlight-item">
-                            <h5>IT</h5>
-                            <p>Paham Dengan IT Support</p>
-                        </div>
-                        <div class="highlight-item">
-                            <h5>Tools - AI</h5>
-                            <p>Up-to-date dengan alat dan teknologi AI</p>
-                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- IT Support -->
+            <div class="cv-group reveal">
+                <h4 class="cv-group-title">IT Support</h4>
+                <div class="cv-card-grid">
+                    <article class="cv-skill-card">
+                        <div class="cv-skill-icon"><i class="fa-solid fa-server"></i></div>
+                        <h5>System Administration</h5>
+                        <p>Membangun & mengelola server mandiri dengan <strong>Debian</strong> untuk Web, DHCP, DNS, dan FTP.</p>
+                    </article>
+                    <article class="cv-skill-card">
+                        <div class="cv-skill-icon"><i class="fa-solid fa-network-wired"></i></div>
+                        <h5>Network Management</h5>
+                        <p>Merancang instalasi jaringan & manajemen bandwidth dengan perangkat <strong>Mikrotik</strong>.</p>
+                    </article>
+                    <article class="cv-skill-card">
+                        <div class="cv-skill-icon"><i class="fa-solid fa-code"></i></div>
+                        <h5>Web Development</h5>
+                        <p>Pengembangan web dengan HTML, CSS, JavaScript, dan PHP — dari tampilan hingga logika.</p>
+                    </article>
+                    <article class="cv-skill-card">
+                        <div class="cv-skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                        <h5>Troubleshooting</h5>
+                        <p>Mendiagnosis & menyelesaikan masalah teknis sistem & jaringan: laptop, printer, router.</p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Certificates -->
+            <div class="cv-group reveal">
+                <h4 class="cv-group-title">Sertifikat</h4>
+                <div class="cv-gallery-grid">
+                    <div class="cv-gallery-item" onclick="openPortoModal('img/Sertifikat/Siswa_terbaik.jpeg', 'Siswa Terbaik TKJ')">
+                        <img src="img/Sertifikat/Siswa_terbaik.jpeg" alt="Siswa Terbaik">
+                        <span class="cv-gallery-cap">Siswa Terbaik TKJ</span>
+                    </div>
+                    <div class="cv-gallery-item" onclick="openPortoModal('img/Sertifikat/Peringkat_3.jpeg', 'Peringkat 3 TKJ')">
+                        <img src="img/Sertifikat/Peringkat_3.jpeg" alt="Peringkat 3">
+                        <span class="cv-gallery-cap">Peringkat 3 TKJ</span>
+                    </div>
+                    <div class="cv-gallery-item" onclick="openPortoModal('img/Sertifikat/Magang.jpeg', 'Magang PT DigiHerba')">
+                        <img src="img/Sertifikat/Magang.jpeg" alt="Magang">
+                        <span class="cv-gallery-cap">Magang PT DigiHerba</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projects -->
+            <div class="cv-group reveal">
+                <h4 class="cv-group-title">Project</h4>
+                <div class="cv-gallery-grid">
+                    <div class="cv-gallery-item" data-desc="Website War_Net&#10;Website untuk menampilkan dan mengelola produk/barang bekas.&#10;&#10;Tech: HTML • CSS • JavaScript • PHP&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan:&#10;• Membuat tampilan website&#10;• Membuat sistem input produk&#10;• Membuat halaman detail produk&#10;• Mengembangkan fitur sesuai kebutuhan pengguna" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.cv-gallery-cap').textContent, this.dataset.desc)">
+                        <img src="img/warnet.jpg" alt="Warnet">
+                        <span class="cv-gallery-cap">Website Warnet</span>
+                    </div>
+                    <div class="cv-gallery-item" data-desc="Website Ko-san (Kotak Saran)&#10;Membuat aplikasi kotak saran untuk memudahkan warga menyampaikan pendapat.&#10;&#10;Tech: HTML • CSS • JavaScript • PHP&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan:&#10;• Membuat tampilan website&#10;• Membuat halaman&#10;• Mengembangkan fitur sesuai kebutuhan pengguna" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.cv-gallery-cap').textContent, this.dataset.desc)">
+                        <img src="img/ko_san.png" alt="Ko-san">
+                        <span class="cv-gallery-cap">Website Ko-san</span>
+                    </div>
+                    <div class="cv-gallery-item" data-desc="Website Profile Sekolah SMK Darussalam&#10;Website profil sekolah berbasis Laravel yang menyajikan informasi kegiatan, fasilitas, dan PPDB terstruktur.&#10;&#10;Tech: Laravel • PHP • MySQL • HTML • CSS • JavaScript&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan (arsitektur MVC):&#10;• Setup project Laravel & struktur folder MVC&#10;• Model: Eloquent ORM untuk data sekolah, berita & pendaftaran (MySQL)&#10;• Controller: logika & routing halaman (Home, Profil, Berita, PPDB)&#10;• View: template Blade untuk tampilan dinamis & konsisten&#10;• Migration & Seeder: struktur database & data awal sekolah" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.cv-gallery-cap').textContent, this.dataset.desc)">
+                        <img src="img/Smk_darussalam.jpg" alt="SMK Darussalam">
+                        <span class="cv-gallery-cap">Website Profil Sekolah</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ============ RIWAYAT / TIMELINE ============ -->
+    <section id="pendidikan" class="cv-section">
+        <div class="cv-container">
+            <h3 class="cv-section-title reveal">Riwayat Pendidikan &amp; Pengalaman</h3>
 
-    <section id="portfolio" class="section portfolio">
-        <h3>Pengalaman & Project</h3>
-        <div class="container">
-           
-             <div class="case-study">
-                <h2 style="text-align: center; padding: 0 0 20px 0;" >Digital Marketing</h2>
-                
-                <table class="metrics-table">
-                    <thead>
-                        <tr>
-                            <th  style="text-align: center;">Skill</th>
-                            <th colspan="2"  style="text-align: center;">Pengalaman</th>
-                        </tr>
-                    </thead>
-                    <tbody style="text-align: justify;">
-                        <tr>
-                            <td data-label="Skill"  style="text-align: center;">Script Writing </td>
-                            
-                            <td data-label="Pengalaman">Menyusun skrip konten video pendek (Reels/TikTok) secara end-to-end — mulai dari riset topik dan tren, menentukan angle yang relevan dengan target audiens, menulis narasi, hingga menyesuaikan gaya bahasa dan hook pembuka agar konten langsung menarik perhatian dalam 3 detik pertama</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Skill"  style="text-align: center;">Editing Konten Video</td>
-                            <td data-label="Pengalaman">
-                                Melakukan editing video Reels menggunakan CapCut dari pemotongan footage, penyusunan alur visual, penambahan teks/subtitle animasi, sound design (musik latar + sound effect) hingga finalisasi format sesuai spesifikasi platform (rasio 9:16, durasi optimal)
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-label="Skill"  style="text-align: center;">Design Konten Infografis</td>
-                            <td data-label="Pengalaman">
-                                Merancang konten edukatif multi-slide menggunakan Canva mulai dari penyusunan alur informasi, desain layout per slide, pemilihan tipografi dan palet warna yang konsisten dengan brand identity, hingga finalisasi aset siap posting di Instagram
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-label="Skill" style="text-align: center;">Konten Infografis dan Reels Video</td>
-                            <td colspan="2" data-label="Pengalaman">
-                                <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-                                    <a href="show_pic.html" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Lihat Gambar </a>
-                                    <a href="show_video.html" class="cta-button" style="display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Lihat Video </a>
-                                </div>
-                            </td>
-                        </tr>
-                         
-
-                        <!-- <tr>
-                            <td data-label="Skill"  style="text-align: center;">AI - Assisted Content Creation</td>
-                            <td data-label="Pencapaian">
-                                Memanfaatkan AI tools (Gemini & Flow) untuk mempercepat proses produksi konten — mulai dari generate ide, menyusun draft copywriting, hingga menghasilkan aset visual, kemudian menyesuaikan output AI dengan tone of voice brand sebelum dipublikasikan                            </td>
-                        </tr> -->
-                        <!-- <tr>
-                            <td data-label="Skill"  style="text-align: center;">Technical Troubleshooting</td>
-                            <td colspan="2" data-label="Pencapaian">Berhasil mengatasi gangguan teknis pada akun iklan seperti <strong>spam</strong>, <strong>fatigue audiens</strong>, serta <strong> menjaga dan membuat konten winning untuk menjaga kontinuitas iklan.</strong></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Skill" style="text-align: center;">Hasil Iklan</td>
-                            <td colspan="2" data-label="Pencapaian">
-                                <div class="container">
-                                    <div class="gallery-grid">
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/desember.jpeg', 'Hasil Iklan Desember')" style="cursor:pointer">
-                                            <img src="img/desember.jpeg" alt="Hasil Iklan Desember">
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/januari.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
-                                            <img src="img/januari.jpeg" alt="Kreatif Iklan">
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/november.jpeg', 'Kreatif Iklan')" style="cursor:pointer   ">
-                                            <img src="img/november.jpeg" alt="Kreatif Iklan">
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/agustus.jpeg', 'Kreatif Iklan')" style="cursor:pointer">
-                                            <img src="img/agustus.jpeg" alt="Kreatif Iklan">
-                                        </div>
-                                    </div>
-                                </div>
-                            </td>
-                       </tr> -->
-                    </tbody>
-                </table>
-            </div>
-
-          
-            <div class="case-study">
-                <h2  style="text-align: center; padding: 0 0 20px 0;">IT Support</h2>
-                
-                <table class="metrics-table">
-                    <thead>
-                        <tr>
-                            <th style="text-align: center;">Keahlian IT</th>
-                            <th colspan="2"  style="text-align: center;">Pengalaman</th>
-                        </tr>
-                    </thead>
-                    <tbody style="text-align: justify;">
-                        <tr>
-                            <td data-label="Keahlian IT Support" style="text-align: justify;">System Administration</td>
-                            
-                            <td data-label="Pengalaman">Berhasil membangun, mengonfigurasi, dan mengelola arsitektur server mandiri menggunakan <strong>Debian Server</strong> untuk kebutuhan <strong>Web server, DHCP Server, DNS, dan FTP</strong>.</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Keahlian IT Support" style="text-align: justify;">Network Management</td>
-                            <td data-label="Pengalaman">Mahir merancang instalasi jaringan dan melakukan manajemen bandwidth menggunakan perangkat <strong>Mikrotik</strong>.</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Keahlian IT Support" style="text-align: justify;">Web Development</td>
-                            <td colspan="2" data-label="Pengalaman">Mahir dalam pengembangan web menggunakan bahasa pemrograman seperti HTML, CSS, JavaScript, dan PHP.</td>
-                        </tr>
-                        <tr>
-                            <td data-label="Keahlian IT Support" style="text-align: justify;">Troubleshooting</td>
-                            <td colspan="2" data-label="Pengalaman" >Mahir dalam mendiagnosis dan menyelesaikan masalah teknis pada sistem dan jaringan. Berhasil mendiagnosis berbagai elekronik perangkat di kantor Seperti <strong>Laptop, Printer, Router.</strong></td>
-                        </tr>
-                        <tr>
-                            <td data-label="Skill" style="text-align: center;">Sertifikat</td>
-                            <td colspan="2" data-label="Pengalaman">
-                                <div class="container">
-                                    <div class="gallery-grid">
-                                        
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Siswa_terbaik.jpeg', 'Siswa Terbaik Kompetensi Teknik Komputer Jaringan')" style="cursor:pointer">
-                                            <img src="img/Sertifikat/Siswa_terbaik.jpeg" alt="Kreatif Iklan">
-                                            <div class="caption">Siswa Terbaik Kompetensi Teknik Komputer Jaringan</div>
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Peringkat_3.jpeg', 'Peringkat 3 Kompetensi Teknik Komputer Jaringan')" style="cursor:pointer   ">
-                                            <img src="img/Sertifikat/Peringkat_3.jpeg" alt="Kreatif Iklan">
-                                            <div class="caption">Peringkat 3 Kompetensi Teknik Komputer Jaringan</div>
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal('/img/Sertifikat/Magang.jpeg', 'Magang di Pt.DigiHerba Nusantara')" style="cursor:pointer">
-                                            <img src="img/Sertifikat/Magang.jpeg" alt="Hasil Iklan Desember">
-                                            <div class="caption">Magang di Pt.DigiHerba Nusantara</div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td data-label="Skill" style="text-align: center;">Project</td>
-                            <td colspan="2" data-label="Pengalaman">
-                                <div class="container">
-                                    <div class="gallery-grid">
-                                        
-                                        <div class="portofolio-gallery" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent, this.dataset.desc)" style="cursor:pointer" data-desc="Website War_Net&#10;Website untuk menampilkan dan mengelola produk/barang bekas.&#10;&#10;Tech: HTML • CSS • JavaScript • PHP&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan:&#10;• Membuat tampilan website&#10;• Membuat sistem input produk&#10;• Membuat halaman detail produk&#10;• Mengembangkan fitur sesuai kebutuhan pengguna">
-                                            <img src="img/warnet.jpg" alt="Kreatif Iklan">
-                                            <div class="caption">Membuat Website Warnet (Warung Internet)</div>
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent, this.dataset.desc)" style="cursor:pointer" data-desc="Website Ko-san (Kotak Saran)&#10;membuat aplikasi kotak saran , untuk memudahkan warga dalam menyampaikan pendapat dengan mudah.&#10;&#10;Tech: HTML • CSS • JavaScript • PHP&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan:&#10;• Membuat tampilan website&#10;• Membuat halaman&#10;• Mengembangkan fitur sesuai kebutuhan pengguna">
-                                            <img src="img/ko_san.png" alt="Kreatif Iklan">
-                                            <div class="caption">Membuat Website Ko-san(Kotak Saran)</div>
-                                        </div>
-                                        <div class="portofolio-gallery" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent, this.dataset.desc)" style="cursor:pointer" data-desc="Website Profile Sekolah SMK Darussalam&#10;Website profil sekolah berbasis Laravel yang menyajikan informasi kegiatan, fasilitas, dan PPDB secara terstruktur.&#10;&#10;Tech: Laravel • PHP • MySQL • HTML • CSS • JavaScript&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan (arsitektur MVC):&#10;• Setup project Laravel & struktur folder MVC (Model-View-Controller)&#10;• Model: Eloquent ORM untuk data sekolah, berita & pendaftaran (MySQL)&#10;• Controller: logika & routing halaman (Home, Profil, Berita, PPDB)&#10;• View: template Blade untuk tampilan dinamis & konsisten antar halaman&#10;• Migration & Seeder: struktur database & data awal sekolah">
-                                            <img src="img/Smk_darussalam.jpg" alt="Website Profile Sekolah">
-                                            <div class="caption">Membuat Website profile Sekolah </div>
-                                        </div>
-                                        
-                                    </div>
-                                </div>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-    <section id="pendidikan" class="section riwayat">
-        <div class="container">
-            <h3>Riwayat Pendidikan & Pengalaman</h3>
-            
-            <h4 class="sub-heading-riwayat">Pengalaman Kerja</h4>
-            <div class="riwayat-grid">
-                <div class="riwayat-card">
-                    <h5>PT. Digi Herba Nusantara</h5>
-                    <p class="riwayat-detail"><Strong>Meta Advertiser Specialist</Strong> | Juni 2024 - Sekarang</p>
+            <h4 class="cv-group-title reveal">Pengalaman Kerja</h4>
+            <div class="cv-timeline reveal">
+                <div class="cv-tl-item">
+                    <div class="cv-tl-dot"></div>
+                    <div class="cv-tl-card">
+                        <h5>PT. Digi Herba Nusantara</h5>
+                        <p class="cv-tl-meta">Meta Advertiser Specialist · Jun 2024 — Sekarang</p>
+                    </div>
                 </div>
-                <div class="riwayat-card">
-                    <h5>PT. Serasi Manunggal Sejahtera</h5>
-                    <p class="riwayat-detail"><strong>Cleaning Service</strong> | September 2023 - Juni 2024</p>
+                <div class="cv-tl-item">
+                    <div class="cv-tl-dot"></div>
+                    <div class="cv-tl-card">
+                        <h5>PT. Serasi Manunggal Sejahtera</h5>
+                        <p class="cv-tl-meta">Cleaning Service · Sep 2023 — Jun 2024</p>
+                    </div>
                 </div>
             </div>
 
-            <h4 class="sub-heading-riwayat" style="margin-top: 50px;">Pendidikan</h4>
-            <div class="riwayat-grid">
-                <div class="riwayat-card">
-                    <h5>Universitas Pamulang</h5>
-                    <p class="riwayat-detail">Teknik Informatika (2023 - Sekarang)</p>
+            <h4 class="cv-group-title reveal" style="margin-top:56px;">Pendidikan</h4>
+            <div class="cv-timeline reveal">
+                <div class="cv-tl-item">
+                    <div class="cv-tl-dot"></div>
+                    <div class="cv-tl-card">
+                        <h5>Universitas Pamulang</h5>
+                        <p class="cv-tl-meta">Teknik Informatika · 2023 — Sekarang</p>
+                    </div>
                 </div>
-                <div class="riwayat-card">
-                    <h5>SMK Muhammadiyah 3</h5>
-                    <p class="riwayat-detail">Teknik Komputer dan Jaringan (2020 - 2023)</p>
+                <div class="cv-tl-item">
+                    <div class="cv-tl-dot"></div>
+                    <div class="cv-tl-card">
+                        <h5>SMK Muhammadiyah 3</h5>
+                        <p class="cv-tl-meta">Teknik Komputer & Jaringan · 2020 — 2023</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- <section id="gallery" class="section gallery-section">
-        <div class="container">
-            <h3>Galeri Visual</h3>
-            <p class="gallery-description">every moment captured through my lens.</p>
-
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/1.jpg" alt="Hasil Iklan Terbaik">
-                    <div class="caption">Ultahhhh 20+ (MAKASIHHTEMAN-TEMANN!!!)</div>
-                </div>
-
-
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/3.jpg" alt="Foto Bekerja">
-                    <div class="caption">Hari Batik (FujiFilm 200)</div>
-                </div>
-
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/4.jpg" alt="Hobi Foto">
-                    <div class="caption">Blok M With prenn </div>
-                </div>
-
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/5.jpg" alt="Hobi Foto">
-                    <div class="caption">RoofTop Gaplek</div>
-                </div>
-
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/6.jpg" alt="Hobi Foto">
-                    <div class="caption">Mie Ayam🤤</div>
-                </div>
-                 <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/Seruuu.jpeg" alt="Foto Bekerja">
-                    <div class="caption">Jalan Jalan Ke-Senen(senenyan city)</div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- <section id="contact" class="section contact">
-        <div class="container">
-            <h3>📞 Hubungi Saya</h3>
-            <h4>Kerja Sama dengan saya.</h4>
-            
-            <form action="#" method="POST" class="contact-form">
-                <div class="form-group">
-                    <label for="name">Nama Lengkap</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="subject">Subjek</label>
-                    <select id="subject" name="subject" required>
-                        <option value="">Pilih Subjek</option>
-                        <option value="hire">Tawaran Pekerjaan</option>
-                        <option value="konsultasi">Konsultasi Iklan</option>
-                        <option value="konsultasi">Fotografi</option>
-                        <option value="lainnya">Lainnya</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Pesan Anda</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="cta-button">Kirim Pesan</button>
-            </form>
-            
-        </div>
-    </section> -->
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 Hanif Almasah Portofolio CV</p>
+    <!-- ============ FOOTER ============ -->
+    <footer class="cv-footer">
+        <div class="cv-container">
+            <p>© 2026 Hanif Almasah — Crafted with focus.</p>
         </div>
     </footer>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <!-- <div id="porto-overlay">
-        <div id="porto-modal">
-            <button id="porto-close" onclick="document.getElementById('porto-overlay').style.display='none'">✕</button>
-            <img id="porto-modal-img" src="" alt="Preview">
-            <p id="porto-modal-caption"></p>
-        </div>
-    </div> -->
 </body>
 </html>
