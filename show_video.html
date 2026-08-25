@@ -1,124 +1,92 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Video Portofolio</title>
-    <link rel="stylesheet" href="style.css" class="css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Video Showreel — Hanif Almasah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cv-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
-<body>
-    <nav class="navbar" style="color:white;">
-        <div class="container nav-content">
-            <a href="#home" class="logo"></i> Hanif Almasah</a>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+<body class="cv-gpage">
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="cv-navbar" id="cvNavbar">
+        <div class="cv-container cv-nav-inner">
+            <a href="index.html#home" class="cv-logo">Hanif<span>Almasah</span></a>
+            <button class="cv-hamburger" id="cvHamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html#home">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#portfolio">PORTFOLIO</a></li>
-                <li><a href="index.html#pendidikan">RIWAYAT</a></li>
-                <li><a href="show_video.html">VIDEO</a></li>  
-                <li><a href="show_pic.html">GAMBAR</a></li>
+            <ul class="cv-nav-links" id="cvNavLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#pendidikan">Riwayat</a></li>
+                <li><a href="show_video.html">Video</a></li>
+                <li><a href="show_pic.html">Galeri</a></li>
             </ul>
+            <a href="files/CV_Hanif_Almasah.pdf" download class="cv-nav-cta">Download CV</a>
         </div>
     </nav>
-     <section id="video" class="section video-section bg-light" style="padding: 60px 0;">
-                <div class="container text-center">
-                    <h3 class="mb-4" style="font-weight: bold;">Video Showreel</h3>
-                    <p class="text-muted mb-5" style="max-width: 600px; margin: 0 auto; text-align: justify;">
-                        Berikut beberapa contoh video yang pernah saya buat untuk kebutuhan iklan, konten edukasi, dan branding. Video-video ini mencerminkan kemampuan saya dalam menyusun narasi visual yang menarik, mengedit dengan detail, serta menyesuaikan format sesuai platform digital.
-                    </p>
-                    
-                    <!-- Menambahkan class g-4 untuk memberikan jarak antar item di dalam grid -->
-                    <div class="row justify-content-center g-4">
-                        
-                        <!-- Video 1 -->
-                        <!-- col-lg-4 (3 kolom di monitor laptop/PC), col-md-6 (2 kolom di tablet), col-12 (1 kolom penuh di HP) -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="video/ramadansale2.mp4" type="video/mp4">
 
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
+    <!-- ============ VIDEO ============ -->
+    <section class="cv-section">
+        <div class="cv-container">
+            <h3 class="cv-section-title reveal">Video Showreel</h3>
+            <p class="cv-gpage-intro reveal">Berikut beberapa contoh video yang pernah saya buat untuk kebutuhan iklan, konten edukasi, dan branding. Video dioptimasi ke 720p agar tetap ringan saat dibuka di HP — klik poster untuk memutar.</p>
 
-                        <!-- Video 2 -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="video/Banting monitor .mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                        <!-- Video 3 -->
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="video/outro april.mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="video/buat bunda lala.mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="video/ginela_ledis.mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="video/GNL-007.mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 col-12">
-                            <div class="ratio ratio-16x9 shadow-lg rounded-3 overflow-hidden">
-                                <video controls poster="">
-                                    <source src="video/mirip.mp4" type="video/mp4">
-                                    Browser Anda tidak mendukung tag video.
-                                </video>
-                            </div>
-                        </div>
-
-                    </div>
+            <div class="cv-video-grid reveal">
+                <div class="cv-video-lazy" data-src="video/optimized/ramadansale2.mp4">
+                    <img src="video/posters/ramadansale2.jpg" alt="Ramadhan Sale" loading="lazy">
+                    <span class="cv-play"><i class="fa-solid fa-play"></i></span>
+                    <div class="cv-video-cap">Ramadhan Sale</div>
                 </div>
-            </section>
-             <footer>
-        <div class="container">
-            <p>&copy; 2026 Hanif Almasah Portofolio CV</p>
+                <div class="cv-video-lazy" data-src="video/optimized/Banting monitor .mp4">
+                    <img src="video/posters/Banting monitor .jpg" alt="Banting Monitor" loading="lazy">
+                    <span class="cv-play"><i class="fa-solid fa-play"></i></span>
+                    <div class="cv-video-cap">Banting Monitor</div>
+                </div>
+                <div class="cv-video-lazy" data-src="video/optimized/outro april.mp4">
+                    <img src="video/posters/outro april.jpg" alt="Outro April" loading="lazy">
+                    <span class="cv-play"><i class="fa-solid fa-play"></i></span>
+                    <div class="cv-video-cap">Outro April</div>
+                </div>
+                <div class="cv-video-lazy" data-src="video/optimized/buat bunda lala.mp4">
+                    <img src="video/posters/buat bunda lala.jpg" alt="Buat Bunda Lala" loading="lazy">
+                    <span class="cv-play"><i class="fa-solid fa-play"></i></span>
+                    <div class="cv-video-cap">Buat Bunda Lala</div>
+                </div>
+                <div class="cv-video-lazy" data-src="video/optimized/ginela_ledis.mp4">
+                    <img src="video/posters/ginela_ledis.jpg" alt="Ginela Ledis" loading="lazy">
+                    <span class="cv-play"><i class="fa-solid fa-play"></i></span>
+                    <div class="cv-video-cap">Ginela Ledis</div>
+                </div>
+                <div class="cv-video-lazy" data-src="video/optimized/GNL-007.mp4">
+                    <img src="video/posters/GNL-007.jpg" alt="GNL-007" loading="lazy">
+                    <span class="cv-play"><i class="fa-solid fa-play"></i></span>
+                    <div class="cv-video-cap">GNL-007</div>
+                </div>
+                <div class="cv-video-lazy" data-src="video/optimized/mirip.mp4">
+                    <img src="video/posters/mirip.jpg" alt="Mirip" loading="lazy">
+                    <span class="cv-play"><i class="fa-solid fa-play"></i></span>
+                    <div class="cv-video-cap">Mirip</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="cv-footer">
+        <div class="cv-container">
+            <p>© 2026 Hanif Almasah — Crafted with focus.</p>
         </div>
     </footer>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <!-- <div id="porto-overlay">
 </body>
 </html>

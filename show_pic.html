@@ -1,79 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Show Video Portofolio</title>
-    <link rel="stylesheet" href="style.css" class="css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Galeri Portofolio — Hanif Almasah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cv-style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
 </head>
-<body>
-    <nav class="navbar" style="color:white;">
-        <div class="container nav-content">
-            <a href="#home" class="logo"></i> Hanif Almasah</a>
-            <button class="hamburger" id="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+<body class="cv-gpage">
+
+    <!-- ============ NAVBAR ============ -->
+    <nav class="cv-navbar" id="cvNavbar">
+        <div class="cv-container cv-nav-inner">
+            <a href="index.html#home" class="cv-logo">Hanif<span>Almasah</span></a>
+            <button class="cv-hamburger" id="cvHamburger" aria-label="Menu">
+                <span></span><span></span><span></span>
             </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="index.html#home">HOME</a></li>
-                <li><a href="index.html#about">ABOUT</a></li>
-                <li><a href="index.html#portfolio">PORTFOLIO</a></li>
-                <li><a href="index.html#pendidikan">RIWAYAT</a></li>
-                <li><a href="show_video.html">VIDEO</a></li>  
-                <li><a href="show_pic.html">GAMBAR</a></li>
+            <ul class="cv-nav-links" id="cvNavLinks">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#portfolio">Portfolio</a></li>
+                <li><a href="index.html#pendidikan">Riwayat</a></li>
+                <li><a href="show_video.html">Video</a></li>
+                <li><a href="show_pic.html">Galeri</a></li>
             </ul>
+            <a href="files/CV_Hanif_Almasah.pdf" download class="cv-nav-cta">Download CV</a>
         </div>
     </nav>
-    <section id="gallery" class="section gallery-section">
-        <div class="container">
-            <h3>Portofolio</h3>
-            <p class="gallery-description">every poster i created</p>
 
-            <div class="gallery-grid">
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/poster lawas.png" alt="Kreatif Iklan">
-                    <div class="caption">Poster Ads Generos</div>
-                </div>
+    <!-- ============ GALLERY ============ -->
+    <section class="cv-section">
+        <div class="cv-container">
+            <h3 class="cv-section-title reveal">Galeri Kreatif</h3>
+            <p class="cv-gpage-intro reveal">Kumpulan poster dan aset visual yang pernah saya produksi untuk kebutuhan iklan, edukasi, dan branding — disusun dengan tipografi dan palet warna yang konsisten dengan identitas brand.</p>
 
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/Sacha_inchi.jpeg" alt="Kreatif Iklan">
-                    <div class="caption">Poster Feed Untuk Product Sacha Inchi</div>
+            <div class="cv-gallery-grid reveal">
+                <div class="cv-gallery-item" onclick="openPortoModal('img/poster lawas.png', 'Poster Ads Generos')">
+                    <img src="img/poster lawas.png" alt="Poster Ads Generos">
+                    <span class="cv-gallery-cap">Poster Ads Generos</span>
                 </div>
-
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/APA IYA.png" alt="Hobi Foto">
-                    <div class="caption">Poster Harga Dan Manfaat Generos </div>
+                <div class="cv-gallery-item" onclick="openPortoModal('img/Sacha_inchi.jpeg', 'Poster Feed Sacha Inchi')">
+                    <img src="img/Sacha_inchi.jpeg" alt="Sacha Inchi">
+                    <span class="cv-gallery-cap">Poster Feed Sacha Inchi</span>
                 </div>
-
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/10manfaat osteoporosis.png" alt="Hobi Foto">
-                    <div class="caption">Manfaat RoyalFlakes</div>
+                <div class="cv-gallery-item" onclick="openPortoModal('img/APA IYA.png', 'Poster Harga & Manfaat Generos')">
+                    <img src="img/APA IYA.png" alt="APA IYA">
+                    <span class="cv-gallery-cap">Poster Harga & Manfaat Generos</span>
                 </div>
-
-                <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/BAYU.jpg" alt="Hobi Foto">
-                    <div class="caption">Poster Harga Generos</div>
+                <div class="cv-gallery-item" onclick="openPortoModal('img/10manfaat osteoporosis.png', 'Manfaat RoyalFlakes')">
+                    <img src="img/10manfaat osteoporosis.png" alt="RoyalFlakes">
+                    <span class="cv-gallery-cap">Manfaat RoyalFlakes</span>
                 </div>
-                 <div class="gallery-item" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.caption').textContent)" style="cursor:pointer;">
-                    <img src="img/ginelaSkin.png" alt="Foto Bekerja">
-                    <div class="caption">Poster Kandungan Ginela</div>
+                <div class="cv-gallery-item" onclick="openPortoModal('img/BAYU.jpg', 'Poster Harga Generos')">
+                    <img src="img/BAYU.jpg" alt="BAYU">
+                    <span class="cv-gallery-cap">Poster Harga Generos</span>
+                </div>
+                <div class="cv-gallery-item" onclick="openPortoModal('img/ginelaSkin.png', 'Poster Kandungan Ginela')">
+                    <img src="img/ginelaSkin.png" alt="Ginela">
+                    <span class="cv-gallery-cap">Poster Kandungan Ginela</span>
                 </div>
             </div>
         </div>
     </section>
 
-     <footer>
-        <div class="container">
-            <p>&copy; 2026 Hanif Almasah Portofolio CV</p>
+    <footer class="cv-footer">
+        <div class="cv-container">
+            <p>© 2026 Hanif Almasah — Crafted with focus.</p>
         </div>
     </footer>
 
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="script.js"></script>
-    <!-- <div id="porto-overlay">
 </body>
 </html>

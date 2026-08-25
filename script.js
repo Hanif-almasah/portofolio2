@@ -247,3 +247,71 @@ function openMediaModal(type, src, caption) {
 document.addEventListener('DOMContentLoaded', function() {
     initCarousel();
 });
+
+// ==========================================
+// REVAMP: LAZY-LOAD VIDEO (show_video.html)
+// Click poster -> swap to <video> and play
+// ==========================================
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.cv-video-lazy').forEach(function(card) {
+        card.addEventListener('click', function() {
+            if (card.querySelector('video')) return; // already loaded
+            const src = card.getAttribute('data-src');
+            if (!src) return;
+            const img = card.querySelector('img');
+            const play = card.querySelector('.cv-play');
+            const video = document.createElement('video');
+            video.src = src;
+            video.controls = true;
+            video.autoplay = true;
+            video.setAttribute('playsinline', '');
+            if (img) img.replaceWith(video);
+            if (play) play.remove();
+            video.play().catch(function() {});
+        });
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const cvNavbar = document.getElementById('cvNavbar');
+    const cvHamburger = document.getElementById('cvHamburger');
+    const cvNavLinks = document.getElementById('cvNavLinks');
+
+    // Navbar shadow on scroll
+    if (cvNavbar) {
+        const onScroll = () => {
+            cvNavbar.classList.toggle('cv-scrolled', window.scrollY > 10);
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+    }
+
+    // Hamburger toggle (new ids)
+    if (cvHamburger && cvNavLinks) {
+        cvHamburger.addEventListener('click', function() {
+            cvHamburger.classList.toggle('cv-active');
+            cvNavLinks.classList.toggle('cv-active');
+        });
+        cvNavLinks.querySelectorAll('a').forEach(function(a) {
+            a.addEventListener('click', function() {
+                cvHamburger.classList.remove('cv-active');
+                cvNavLinks.classList.remove('cv-active');
+            });
+        });
+    }
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && revealEls.length) {
+        const io = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('cv-visible');
+                    io.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        revealEls.forEach(function(el) { io.observe(el); });
+    } else {
+        revealEls.forEach(function(el) { el.classList.add('cv-visible'); });
+    }
+});
