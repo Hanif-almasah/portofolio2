@@ -114,7 +114,14 @@ function openPortoModal(src, caption, desc) {
     const descEl = document.getElementById('porto-modal-desc');
     img.src = src;
     cap.textContent = caption || '';
-    descEl.textContent = desc || '';
+    // Render description as HTML so URLs become clickable links.
+    // Escape first to avoid injection, then auto-link raw URLs.
+    const esc = document.createElement('div');
+    esc.textContent = desc || '';
+    const html = (esc.innerHTML || '')
+        .replace(/\n/g, '<br>')
+        .replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+    descEl.innerHTML = html;
     overlay.style.display = 'flex';
 }
 
@@ -301,6 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Scroll reveal
     const revealEls = document.querySelectorAll('.reveal');
+    const showAll = () => revealEls.forEach(el => el.classList.add('cv-visible'));
     if ('IntersectionObserver' in window && revealEls.length) {
         const io = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
@@ -309,9 +317,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     io.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        }, { threshold: 0, rootMargin: '0px 0px -10% 0px' });
         revealEls.forEach(function(el) { io.observe(el); });
+        // Safety: if anything is still hidden after 1.2s (e.g. observer missed
+        // an in-viewport element on first tick), force-reveal everything.
+        setTimeout(showAll, 1200);
     } else {
-        revealEls.forEach(function(el) { el.classList.add('cv-visible'); });
+        showAll();
+    }
+
+    // ===== Project category tabs (Digital Marketing / IT) =====
+    const projTabs = document.getElementById('cvProjTabs');
+    const featured = document.getElementById('cvFeatured');
+    if (projTabs && featured) {
+        const cards = featured.querySelectorAll('.cv-feat');
+        projTabs.addEventListener('click', function(e) {
+            const btn = e.target.closest('.cv-tab');
+            if (!btn) return;
+            projTabs.querySelectorAll('.cv-tab').forEach(function(t) { t.classList.remove('active'); });
+            btn.classList.add('active');
+            const cat = btn.dataset.cat;
+            cards.forEach(function(card) {
+                card.hidden = !(cat === 'all' || card.dataset.cat === cat);
+            });
+        });
     }
 });
