@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="cv-style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -30,7 +31,6 @@
                 <li><a href="show_video.html">Video</a></li>
                 <li><a href="show_pic.html">Galeri</a></li>
             </ul>
-            <a href="files/CV_Hanif_Almasah.pdf" download class="cv-nav-cta">Download CV</a>
         </div>
     </nav>
 
@@ -46,9 +46,6 @@
                     dan menjembatani dunia marketing dengan fondasi teknis yang solid.
                 </p>
                 <div class="cv-hero-actions">
-                    <a href="files/CV_Hanif_Almasah.pdf" download class="cv-btn-primary">
-                        <i class="fa-solid fa-download"></i> Download Resume
-                    </a>
                     <div class="cv-social">
                         <a href="https://github.com/Hanif-almasah" target="_blank" aria-label="GitHub" class="cv-social-link"><i class="fa-brands fa-github"></i></a>
                         <a href="https://instagram.com/almasa.sih" target="_blank" aria-label="Instagram" class="cv-social-link"><i class="fa-brands fa-instagram"></i></a>
@@ -179,19 +176,179 @@
             <!-- Projects -->
             <div class="cv-group reveal">
                 <h4 class="cv-group-title">Project</h4>
-                <div class="cv-gallery-grid">
-                    <div class="cv-gallery-item" data-desc="Website War_Net&#10;Website untuk menampilkan dan mengelola produk/barang bekas.&#10;&#10;Tech: HTML • CSS • JavaScript • PHP&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan:&#10;• Membuat tampilan website&#10;• Membuat sistem input produk&#10;• Membuat halaman detail produk&#10;• Mengembangkan fitur sesuai kebutuhan pengguna" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.cv-gallery-cap').textContent, this.dataset.desc)">
-                        <img src="img/warnet.jpg" alt="Warnet">
-                        <span class="cv-gallery-cap">Website Warnet</span>
-                    </div>
-                    <div class="cv-gallery-item" data-desc="Website Ko-san (Kotak Saran)&#10;Membuat aplikasi kotak saran untuk memudahkan warga menyampaikan pendapat.&#10;&#10;Tech: HTML • CSS • JavaScript • PHP&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan:&#10;• Membuat tampilan website&#10;• Membuat halaman&#10;• Mengembangkan fitur sesuai kebutuhan pengguna" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.cv-gallery-cap').textContent, this.dataset.desc)">
-                        <img src="img/ko_san.png" alt="Ko-san">
-                        <span class="cv-gallery-cap">Website Ko-san</span>
-                    </div>
-                    <div class="cv-gallery-item" data-desc="Website Profile Sekolah SMK Darussalam&#10;Website profil sekolah berbasis Laravel yang menyajikan informasi kegiatan, fasilitas, dan PPDB terstruktur.&#10;&#10;Tech: Laravel • PHP • MySQL • HTML • CSS • JavaScript&#10;Role: Full-stack Developer&#10;&#10;Yang saya kerjakan (arsitektur MVC):&#10;• Setup project Laravel & struktur folder MVC&#10;• Model: Eloquent ORM untuk data sekolah, berita & pendaftaran (MySQL)&#10;• Controller: logika & routing halaman (Home, Profil, Berita, PPDB)&#10;• View: template Blade untuk tampilan dinamis & konsisten&#10;• Migration & Seeder: struktur database & data awal sekolah" onclick="openPortoModal(this.querySelector('img').src, this.querySelector('.cv-gallery-cap').textContent, this.dataset.desc)">
-                        <img src="img/Smk_darussalam.jpg" alt="SMK Darussalam">
-                        <span class="cv-gallery-cap">Website Profil Sekolah</span>
-                    </div>
+                <div class="cv-tabs" id="cvProjTabs">
+                    <button class="cv-tab active" data-cat="dm">Digital Marketing</button>
+                    <button class="cv-tab" data-cat="it">IT</button>
+                </div>
+                <div class="cv-featured reveal" id="cvFeatured">
+
+                    <!-- 1. Meta Ads Create Campaign (terbaru) -->
+                    <article class="cv-feat" data-cat="dm">
+                        <img class="cv-feat-img" src="img/projects/meta-ads-create.svg" alt="Meta Ads Create Campaign">
+                        <div class="cv-feat-body">
+                            <div class="cv-feat-head">
+                                <h4 class="cv-feat-title">Meta Ads Create Campaign</h4>
+                                <span class="cv-badge live">Live</span>
+                            </div>
+                            <p class="cv-feat-desc">Tool yang membuat kampanye, ad set, dan kreatif Meta Ads langsung via Graph API dengan parameter terstruktur.</p>
+                            <div class="cv-feat-subs">
+                                <div>
+                                    <h5>What I built</h5>
+                                    <ul>
+                                        <li>Flow pembuatan Campaign → Ad Set → Ad via API</li>
+                                        <li>Mapping objective, budget, & targeting ke parameter Meta</li>
+                                        <li>Validasi respons API & penanganan error</li>
+                                        <li>Template kampanye reusable per brand (Generos, Cukakurma)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="cv-feat-benefit">Launching kampanye jadi hitungan menit, bukan setup manual berulang di Ads Manager.</p>
+                            <div class="cv-feat-tags">
+                                <span class="cv-tag">Python</span><span class="cv-tag">Meta Marketing API</span><span class="cv-tag">OAuth</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 2. Meta Automation Reporting -->
+                    <article class="cv-feat" data-cat="dm">
+                        <img class="cv-feat-img" src="img/projects/meta-automation.svg" alt="Meta Automation Reporting">
+                        <div class="cv-feat-body">
+                            <div class="cv-feat-head">
+                                <h4 class="cv-feat-title">Meta Automation Reporting</h4>
+                                <span class="cv-badge live">Live</span>
+                            </div>
+                            <p class="cv-feat-desc">Pipeline otomasi yang menarik insight Meta Ads (ROAS, CPA, CPL, AddToCart) dan menyusun laporan harian berformat standar.</p>
+                            <div class="cv-feat-subs">
+                                <div>
+                                    <h5>What I built</h5>
+                                    <ul>
+                                        <li>Integrasi Meta Graph API untuk ekstraksi insight multi-akun</li>
+                                        <li>Normalisasi data ke format laporan (Generos & Cukakurma)</li>
+                                        <li>Scheduler laporan otomatis (09.30 / 13.00 / 16.00 / 21.00)</li>
+                                        <li>Thresholding & insight otomatis sesuai benchmark kinerja</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="cv-feat-benefit">Tim melihat performa iklan real-time tanpa buka Ads Manager — keptusan scale/kill cepat.</p>
+                            <div class="cv-feat-tags">
+                                <span class="cv-tag">Python</span><span class="cv-tag">Meta Graph API</span><span class="cv-tag">Cron</span><span class="cv-tag">JSON</span>
+                            </div>
+                            <a class="cv-feat-link" href="https://github.com/Hanif-almasah/portofolio2" target="_blank" rel="noopener noreferrer">github.com/Hanif-almasah/portofolio2 →</a>
+                        </div>
+                    </article>
+
+                    <!-- 3. Hermes Agent -->
+                    <article class="cv-feat" data-cat="it">
+                        <img class="cv-feat-img" src="img/projects/hermes-agent.jpeg" alt="Hermes Agent">
+                        <div class="cv-feat-body">
+                            <div class="cv-feat-head">
+                                <h4 class="cv-feat-title">Hermes Agent</h4>
+                                <span class="cv-badge active">Active</span>
+                            </div>
+                            <p class="cv-feat-desc">AI agent personal (Chief of Staff) yang mengorkestrasi konteks lintas domain: marketing, coding, dan operasional harian.</p>
+                            <div class="cv-feat-subs">
+                                <div>
+                                    <h5>What I built</h5>
+                                    <ul>
+                                        <li>Mengonfigurasi persona, SOP, dan protokol operasi agent</li>
+                                        <li>Merancang skill modular (marketing report, coding helper, research)</li>
+                                        <li>Mengintegrasikan alat eksternal (web, terminal, file, browser)</li>
+                                        <li>Mengotomatisasi alur kerja berulang via cron & delegation</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="cv-feat-benefit">Satu assistant yang paham konteks kerjaan — eksekusi harian & riset jauh lebih cepat.</p>
+                            <div class="cv-feat-tags">
+                                <span class="cv-tag">Python</span><span class="cv-tag">TypeScript</span><span class="cv-tag">LLM Tooling</span><span class="cv-tag">Skill System</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 4. Website Warnet -->
+                    <article class="cv-feat" data-cat="it">
+                        <img class="cv-feat-img" src="img/warnet.jpg" alt="Website Warnet">
+                        <div class="cv-feat-body">
+                            <div class="cv-feat-head">
+                                <h4 class="cv-feat-title">Website Warnet</h4>
+                                <span class="cv-badge done">Done</span>
+                            </div>
+                            <p class="cv-feat-desc">Platform web untuk menampilkan dan mengelola inventaris barang bekas (warnet/usaha kecil) secara terstruktur.</p>
+                            <div class="cv-feat-subs">
+                                <div>
+                                    <h5>What I built</h5>
+                                    <ul>
+                                        <li>Merancang UI dan alur navigasi produk</li>
+                                        <li>Membangun modul input & manajemen produk (CRUD)</li>
+                                        <li>Membuat halaman detail produk responsif</li>
+                                        <li>Menyesuaikan fitur dengan kebutuhan pengguna akhir</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="cv-feat-benefit">Pemilik usaha bisa melacak stok barang bekas tanpa pencatatan manual — efisien & rapi.</p>
+                            <div class="cv-feat-tags">
+                                <span class="cv-tag">HTML</span><span class="cv-tag">CSS</span><span class="cv-tag">JavaScript</span><span class="cv-tag">PHP</span>
+                            </div>
+                            <a class="cv-feat-link" href="https://github.com/Hanif-almasah/war_net" target="_blank" rel="noopener noreferrer">github.com/Hanif-almasah/war_net →</a>
+                        </div>
+                    </article>
+
+                    <!-- 5. Website Ko-san -->
+                    <article class="cv-feat" data-cat="it">
+                        <img class="cv-feat-img" src="img/ko_san.png" alt="Website Ko-san">
+                        <div class="cv-feat-body">
+                            <div class="cv-feat-head">
+                                <h4 class="cv-feat-title">Website Ko-san</h4>
+                                <span class="cv-badge done">Done</span>
+                            </div>
+                            <p class="cv-feat-desc">Aplikasi kotak saran digital yang memudahkan warga menyampaikan aspirasi secara anonim dan terstruktur.</p>
+                            <div class="cv-feat-subs">
+                                <div>
+                                    <h5>What I built</h5>
+                                    <ul>
+                                        <li>Merancang antarmuka form pengaduan ramah pengguna</li>
+                                        <li>Membangun halaman publik & alur submit aspirasi</li>
+                                        <li>Logika penyimpanan dan validasi input</li>
+                                        <li>Penyesuaian fitur dengan alur kerja perangkat desa</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="cv-feat-benefit">Perangkat desa mendapat umpan balik warga terpusat — aspirasi terekam & terukur.</p>
+                            <div class="cv-feat-tags">
+                                <span class="cv-tag">HTML</span><span class="cv-tag">CSS</span><span class="cv-tag">JavaScript</span><span class="cv-tag">PHP</span>
+                            </div>
+                            <a class="cv-feat-link" href="https://github.com/Hanif-almasah" target="_blank" rel="noopener noreferrer">github.com/Hanif-almasah →</a>
+                        </div>
+                    </article>
+
+                    <!-- 6. Website Profil Sekolah -->
+                    <article class="cv-feat" data-cat="it">
+                        <img class="cv-feat-img" src="img/Smk_darussalam.jpg" alt="Website Profil Sekolah">
+                        <div class="cv-feat-body">
+                            <div class="cv-feat-head">
+                                <h4 class="cv-feat-title">Website Profil Sekolah</h4>
+                                <span class="cv-badge done">Done</span>
+                            </div>
+                            <p class="cv-feat-desc">Situs profil sekolah berbasis Laravel yang menyajikan informasi kegiatan, fasilitas, dan PPDB secara terstruktur.</p>
+                            <div class="cv-feat-subs">
+                                <div>
+                                    <h5>What I built (arsitektur MVC)</h5>
+                                    <ul>
+                                        <li>Setup project Laravel & struktur folder MVC</li>
+                                        <li>Model: Eloquent ORM untuk data sekolah, berita & pendaftaran (MySQL)</li>
+                                        <li>Controller: logika & routing halaman (Home, Profil, Berita, PPDB)</li>
+                                        <li>View: template Blade untuk tampilan dinamis & konsisten</li>
+                                        <li>Migration & Seeder: struktur DB & data awal sekolah</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <p class="cv-feat-benefit">Sekolah punya tautan informasi resmi yang rapi untuk calon siswa & orang tua.</p>
+                            <div class="cv-feat-tags">
+                                <span class="cv-tag">Laravel</span><span class="cv-tag">PHP</span><span class="cv-tag">MySQL</span><span class="cv-tag">Blade</span>
+                            </div>
+                            <a class="cv-feat-link" href="https://github.com/Hanif-almasah" target="_blank" rel="noopener noreferrer">github.com/Hanif-almasah →</a>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </div>
@@ -243,11 +400,11 @@
     <!-- ============ FOOTER ============ -->
     <footer class="cv-footer">
         <div class="cv-container">
-            <p>© 2026 Hanif Almasah — Crafted with focus.</p>
+            <p>© 2026 Hanif Almasah </p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 </html>

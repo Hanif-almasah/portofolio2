@@ -591,6 +591,15 @@ body {
   border-radius: 0 0 16px 16px;
 }
 
+/* Clickable repo/demo links inside the description */
+#porto-modal-desc a {
+  color: #2a5298;
+  font-weight: 600;
+  text-decoration: underline;
+  word-break: break-all;
+}
+#porto-modal-desc a:hover { color: #1a4d7a; }
+
 /* Reveal only when there is description content */
 #porto-modal-desc:not(:empty) {
   display: block;

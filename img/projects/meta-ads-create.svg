@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#f4f6fb"/>
+  <rect x="0" y="0" width="800" height="120" fill="#0f172a"/>
+  <text x="400" y="74" font-family="Plus Jakarta Sans, Segoe UI, sans-serif" font-size="34" font-weight="800" fill="#ffffff" text-anchor="middle">META ADS • CREATE</text>
+  <path d="M280 300 l70 -70 70 70 -70 70 z" fill="#2b5278"/>
+  <path d="M410 300 l70 -70 70 70 -70 70 z" fill="#1e3a5f" opacity="0.7"/>
+  <path d="M540 300 l70 -70 70 70 -70 70 z" fill="#2b5278" opacity="0.45"/>
+  <text x="400" y="500" font-family="Inter, sans-serif" font-size="24" fill="#334155" text-anchor="middle" font-weight="600">Campaign Builder via API</text>
+  <text x="400" y="538" font-family="Inter, sans-serif" font-size="20" fill="#94a3b8" text-anchor="middle">Campaign → Ad Set → Ad</text>
+</svg>
