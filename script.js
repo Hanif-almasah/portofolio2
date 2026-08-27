@@ -342,4 +342,280 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
     }
+
+    // ===== CMS: render content from JSON + admin CRUD =====
+    initCMS();
 });
+
+// ============================================================
+// CMS MODULE — projects & certificates managed via JSON
+// ============================================================
+let CMS_DATA = { projects: [], certificates: [] };
+const CMS_KEY = (window.PORTO_CONFIG && window.PORTO_CONFIG.STORAGE_KEY) || 'cv_cms_data';
+
+async function initCMS() {
+    let data = null;
+    const local = localStorage.getItem(CMS_KEY);
+    if (local) { try { data = JSON.parse(local); } catch (e) {} }
+    if (!data) {
+        try {
+            const res = await fetch((window.PORTO_CONFIG.CONTENT_PATH || 'data/content.json') + '?cb=' + Date.now());
+            data = await res.json();
+        } catch (e) { console.error('CMS load failed', e); return; }
+    }
+    CMS_DATA = normalize(data);
+    renderCMS();
+    setupAdmin();
+}
+
+function normalize(d) {
+    d = d || {};
+    return { projects: d.projects || [], certificates: d.certificates || [] };
+}
+
+function renderCMS() {
+    renderProjects(CMS_DATA.projects);
+    renderCerts(CMS_DATA.certificates);
+}
+
+function renderProjects(list) {
+    const el = document.getElementById('cvFeatured');
+    if (!el) return;
+    el.innerHTML = '';
+    list.forEach(function(p, i) {
+        const art = document.createElement('article');
+        art.className = 'cv-feat';
+        art.dataset.cat = p.cat || 'it';
+        const tags = (p.tags || []).map(escapeHTML).map(function(t) { return `<span class="cv-tag">${t}</span>`; }).join('');
+        const feats = (p.features || []).map(escapeHTML).map(function(f) { return `<li>${f}</li>`; }).join('');
+        const link = p.link ? `<a class="cv-feat-link" href="${escapeAttr(p.link)}" target="_blank" rel="noopener noreferrer">${escapeHTML(p.link.replace('https://',''))} →</a>` : '';
+        art.innerHTML = `
+            <img class="cv-feat-img" src="${escapeAttr(p.img)}" alt="${escapeHTML(p.title)}">
+            <div class="cv-feat-body">
+                <div class="cv-feat-head">
+                    <h4 class="cv-feat-title">${escapeHTML(p.title)}</h4>
+                    <span class="cv-badge ${badgeClass(p.badge)}">${escapeHTML(p.badge)}</span>
+                    <span class="cv-row-actions" data-i="${i}">
+                        <button class="cv-mini edit" data-act="edit-proj" data-i="${i}" title="Edit">✎</button>
+                        <button class="cv-mini del" data-act="del-proj" data-i="${i}" title="Hapus">🗑</button>
+                    </span>
+                </div>
+                <p class="cv-feat-desc">${escapeHTML(p.desc)}</p>
+                <div class="cv-feat-subs"><div><h5>What I built</h5><ul>${feats}</ul></div></div>
+                <p class="cv-feat-benefit">${escapeHTML(p.benefit)}</p>
+                <div class="cv-feat-tags">${tags}</div>
+                ${link}
+            </div>`;
+        el.appendChild(art);
+    });
+    rebindTabs();
+}
+
+function renderCerts(list) {
+    const el = document.getElementById('cvCert');
+    if (!el) return;
+    el.innerHTML = '';
+    list.forEach(function(c, i) {
+        const item = document.createElement('div');
+        item.className = 'cv-gallery-item';
+        item.setAttribute('onclick', `openPortoModal('${escapeAttr(c.src)}', '${escapeAttr(c.cap)}')`);
+        item.innerHTML = `
+            <img src="${escapeAttr(c.src)}" alt="${escapeHTML(c.alt)}">
+            <span class="cv-gallery-cap">${escapeHTML(c.cap)}</span>
+            <span class="cv-row-actions" data-i="${i}">
+                <button class="cv-mini edit" data-act="edit-cert" data-i="${i}" title="Edit">✎</button>
+                <button class="cv-mini del" data-act="del-cert" data-i="${i}" title="Hapus">🗑</button>
+            </span>`;
+        el.appendChild(item);
+    });
+}
+
+function rebindTabs() {
+    const projTabs = document.getElementById('cvProjTabs');
+    const featured = document.getElementById('cvFeatured');
+    if (!projTabs || !featured) return;
+    const cards = featured.querySelectorAll('.cv-feat');
+    projTabs.onclick = function(e) {
+        const btn = e.target.closest('.cv-tab'); if (!btn) return;
+        projTabs.querySelectorAll('.cv-tab').forEach(t => t.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.cat;
+        cards.forEach(c => c.hidden = !(cat === 'all' || c.dataset.cat === cat));
+    };
+    // restore active tab visibility
+    const active = projTabs.querySelector('.cv-tab.active');
+    const cat = active ? active.dataset.cat : 'dm';
+    cards.forEach(c => c.hidden = !(cat === 'all' || c.dataset.cat === cat));
+}
+
+// ---- Admin: login + toolbar + CRUD modal ----
+let cmsAttempts = 0, cmsLock = 0;
+
+function setupAdmin() {
+    const cfg = window.PORTO_CONFIG || {};
+    const HASH = cfg.ADMIN_HASH || '';
+    const toolbar = document.getElementById('cvAdminToolbar');
+    const btn = document.getElementById('cvAdminBtn');
+    const overlay = document.getElementById('cvLoginOverlay');
+    const pass = document.getElementById('cvPassInput');
+    const err = document.getElementById('cvLoginErr');
+
+    if (localStorage.getItem('cv_admin_ok') === '1') enableCMS(toolbar);
+
+    btn.addEventListener('click', function() {
+        if (Date.now() < cmsLock) { err.textContent = 'Terkunci, coba nanti.'; return; }
+        overlay.hidden = false; pass.focus();
+    });
+    document.getElementById('cvLoginCancel').addEventListener('click', function() { overlay.hidden = true; err.textContent = ''; });
+    document.getElementById('cvLoginBtn').addEventListener('click', doLogin);
+    pass.addEventListener('keydown', function(e) { if (e.key === 'Enter') doLogin(); });
+
+    function doLogin() {
+        sha256(pass.value).then(function(h) {
+            if (h === HASH) {
+                localStorage.setItem('cv_admin_ok', '1');
+                overlay.hidden = true; pass.value = ''; err.textContent = '';
+                enableCMS(toolbar);
+            } else {
+                cmsAttempts++;
+                if (cmsAttempts >= 5) { cmsLock = Date.now() + 30000; err.textContent = 'Terlalu banyak. Kunci 30s.'; }
+                else err.textContent = 'Salah (' + cmsAttempts + '/5).';
+            }
+        });
+    }
+
+    document.getElementById('cvLogoutBtn').addEventListener('click', function() {
+        localStorage.removeItem('cv_admin_ok');
+        toolbar.hidden = true;
+        document.getElementById('cvAddProj').hidden = true;
+        document.getElementById('cvAddCert').hidden = true;
+        document.querySelectorAll('.cv-row-actions').forEach(function(a){ a.style.display='none'; });
+    });
+
+    // export / import
+    document.getElementById('cvExportBtn').addEventListener('click', function() {
+        const blob = new Blob([JSON.stringify(CMS_DATA, null, 2)], { type: 'application/json' });
+        const a = document.createElement('a'); a.href = URL.createObjectURL(blob);
+        a.download = 'content.json'; a.click();
+    });
+    const imp = document.getElementById('cvImportFile');
+    document.getElementById('cvImportBtn').addEventListener('click', function() { imp.click(); });
+    imp.addEventListener('change', function(e) {
+        const f = e.target.files[0]; if (!f) return;
+        const r = new FileReader();
+        r.onload = function() { try { CMS_DATA = normalize(JSON.parse(r.result)); persist(); renderCMS(); } catch (x) { alert('JSON rusak'); } };
+        r.readAsText(f);
+    });
+
+    // add buttons
+    document.getElementById('cvAddProj').addEventListener('click', function() { openCmsModal('proj', -1); });
+    document.getElementById('cvAddCert').addEventListener('click', function() { openCmsModal('cert', -1); });
+
+    // delegate edit/delete clicks
+    document.addEventListener('click', function(e) {
+        const b = e.target.closest('[data-act]'); if (!b) return;
+        const i = parseInt(b.dataset.i, 10);
+        if (b.dataset.act === 'edit-proj') openCmsModal('proj', i);
+        else if (b.dataset.act === 'del-proj') { if (confirm('Hapus project ini?')) { CMS_DATA.projects.splice(i,1); persist(); renderCMS(); } }
+        else if (b.dataset.act === 'edit-cert') openCmsModal('cert', i);
+        else if (b.dataset.act === 'del-cert') { if (confirm('Hapus sertifikat ini?')) { CMS_DATA.certificates.splice(i,1); persist(); renderCMS(); } }
+    });
+}
+
+function enableCMS(toolbar) {
+    toolbar.hidden = false;
+    document.getElementById('cvAddProj').hidden = false;
+    document.getElementById('cvAddCert').hidden = false;
+    document.querySelectorAll('.cv-row-actions').forEach(function(a){ a.style.display='inline-flex'; });
+}
+
+// ---- CMS edit modal ----
+const PROJ_FIELDS = [
+    { k: 'title', label: 'Judul', type: 'text' },
+    { k: 'cat', label: 'Kategori', type: 'select', opts: ['dm','it'] },
+    { k: 'badge', label: 'Badge', type: 'select', opts: ['Live','Active','Done'] },
+    { k: 'img', label: 'Gambar (path)', type: 'text' },
+    { k: 'desc', label: 'Deskripsi', type: 'textarea' },
+    { k: 'benefit', label: 'Manfaat', type: 'textarea' },
+    { k: 'features', label: 'Fitur (1 per baris)', type: 'list' },
+    { k: 'tags', label: 'Tags (pisah koma)', type: 'csv' },
+    { k: 'link', label: 'Link (opsional)', type: 'text' }
+];
+const CERT_FIELDS = [
+    { k: 'src', label: 'Gambar (path)', type: 'text' },
+    { k: 'alt', label: 'Alt text', type: 'text' },
+    { k: 'cap', label: 'Caption', type: 'text' }
+];
+
+let cmsEditing = null; // {type, index}
+
+function openCmsModal(type, index) {
+    cmsEditing = { type: type, index: index };
+    const isNew = index < 0;
+    const data = isNew ? {} : (type === 'proj' ? CMS_DATA.projects[index] : CMS_DATA.certificates[index]);
+    const fields = type === 'proj' ? PROJ_FIELDS : CERT_FIELDS;
+    const wrap = document.getElementById('cvCmsFields');
+    wrap.innerHTML = '';
+    fields.forEach(function(f) {
+        const lab = document.createElement('label');
+        lab.className = 'cv-field';
+        lab.innerHTML = `<span>${f.label}</span>`;
+        let input;
+        if (f.type === 'textarea') { input = document.createElement('textarea'); input.value = data[f.k] || ''; }
+        else if (f.type === 'select') {
+            input = document.createElement('select');
+            f.opts.forEach(function(o) { const op = document.createElement('option'); op.value = o; op.textContent = o; if (data[f.k] === o) op.selected = true; input.appendChild(op); });
+        }
+        else if (f.type === 'list') { input = document.createElement('textarea'); input.value = (data[f.k] || []).join('\n'); }
+        else if (f.type === 'csv') { input = document.createElement('input'); input.type = 'text'; input.value = (data[f.k] || []).join(', '); }
+        else { input = document.createElement('input'); input.type = 'text'; input.value = data[f.k] || ''; }
+        input.dataset.k = f.k; input.dataset.t = f.type;
+        lab.appendChild(input);
+        wrap.appendChild(lab);
+    });
+    document.getElementById('cvCmsTitle').textContent = (isNew ? 'Tambah ' : 'Edit ') + (type === 'proj' ? 'Project' : 'Sertifikat');
+    document.getElementById('cvCmsErr').textContent = '';
+    document.getElementById('cvCmsOverlay').hidden = false;
+}
+
+document.getElementById('cvCmsCancel').addEventListener('click', function() { document.getElementById('cvCmsOverlay').hidden = true; });
+document.getElementById('cvCmsSave').addEventListener('click', function() {
+    if (!cmsEditing) return;
+    const fields = cmsEditing.type === 'proj' ? PROJ_FIELDS : CERT_FIELDS;
+    const obj = {};
+    fields.forEach(function(f) {
+        const el = document.querySelector('#cvCmsFields [data-k="' + f.k + '"]');
+        let v = el.value;
+        if (f.type === 'list') v = v.split('\n').map(function(s){return s.trim();}).filter(Boolean);
+        else if (f.type === 'csv') v = v.split(',').map(function(s){return s.trim();}).filter(Boolean);
+        obj[f.k] = v;
+    });
+    if (cmsEditing.index < 0) {
+        if (cmsEditing.type === 'proj') CMS_DATA.projects.push(obj);
+        else CMS_DATA.certificates.push(obj);
+    } else {
+        if (cmsEditing.type === 'proj') CMS_DATA.projects[cmsEditing.index] = obj;
+        else CMS_DATA.certificates[cmsEditing.index] = obj;
+    }
+    persist();
+    renderCMS();
+    if (localStorage.getItem('cv_admin_ok') === '1') { document.getElementById('cvAddProj').hidden=false; document.getElementById('cvAddCert').hidden=false; document.querySelectorAll('.cv-row-actions').forEach(function(a){a.style.display='inline-flex';}); }
+    document.getElementById('cvCmsOverlay').hidden = true;
+});
+
+function persist() {
+    localStorage.setItem(CMS_KEY, JSON.stringify(CMS_DATA));
+}
+
+function badgeClass(b) {
+    b = (b || '').toLowerCase();
+    if (b === 'live') return 'live';
+    if (b === 'active') return 'active';
+    return 'done';
+}
+function escapeHTML(s) { return String(s==null?'':s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+function escapeAttr(s) { return String(s==null?'':s).replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+async function sha256(str) {
+    const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+    return [...new Uint8Array(buf)].map(b => b.toString(16).padStart(2,'0')).join('');
+}

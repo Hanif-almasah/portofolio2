@@ -1,0 +1,106 @@
+{
+  "projects": [
+    {
+      "cat": "dm",
+      "title": "Meta Ads Create Campaign",
+      "badge": "Live",
+      "img": "img/projects/meta-ads-create.svg",
+      "desc": "Tool yang membuat kampanye, ad set, dan kreatif Meta Ads langsung via Graph API dengan parameter terstruktur.",
+      "features": [
+        "Flow pembuatan Campaign → Ad Set → Ad via API",
+        "Mapping objective, budget, & targeting ke parameter Meta",
+        "Validasi respons API & penanganan error",
+        "Template kampanye reusable per brand (Generos, Cukakurma)"
+      ],
+      "benefit": "Launching kampanye jadi hitungan menit, bukan setup manual berulang di Ads Manager.",
+      "tags": ["Python", "Meta Marketing API", "OAuth"],
+      "link": ""
+    },
+    {
+      "cat": "dm",
+      "title": "Meta Automation Reporting",
+      "badge": "Live",
+      "img": "img/projects/meta-automation.svg",
+      "desc": "Pipeline otomasi yang menarik insight Meta Ads (ROAS, CPA, CPL, AddToCart) dan menyusun laporan harian berformat standar.",
+      "features": [
+        "Integrasi Meta Graph API untuk ekstraksi insight multi-akun",
+        "Normalisasi data ke format laporan (Generos & Cukakurma)",
+        "Scheduler laporan otomatis (09.30 / 13.00 / 16.00 / 21.00)",
+        "Thresholding & insight otomatis sesuai benchmark kinerja"
+      ],
+      "benefit": "Tim melihat performa iklan real-time tanpa buka Ads Manager — keptusan scale/kill cepat.",
+      "tags": ["Python", "Meta Graph API", "Cron", "JSON"],
+      "link": "https://github.com/Hanif-almasah/portofolio2"
+    },
+    {
+      "cat": "it",
+      "title": "Hermes Agent",
+      "badge": "Active",
+      "img": "img/projects/hermes-agent.jpeg",
+      "desc": "AI agent personal (Chief of Staff) yang mengorkestrasi konteks lintas domain: marketing, coding, dan operasional harian.",
+      "features": [
+        "Mengonfigurasi persona, SOP, dan protokol operasi agent",
+        "Merancang skill modular (marketing report, coding helper, research)",
+        "Mengintegrasikan alat eksternal (web, terminal, file, browser)",
+        "Mengotomatisasi alur kerja berulang via cron & delegation"
+      ],
+      "benefit": "Satu assistant yang paham konteks kerjaan — eksekusi harian & riset jauh lebih cepat.",
+      "tags": ["Python", "TypeScript", "LLM Tooling", "Skill System"],
+      "link": ""
+    },
+    {
+      "cat": "it",
+      "title": "Website Warnet",
+      "badge": "Done",
+      "img": "img/warnet.jpg",
+      "desc": "Platform web untuk menampilkan dan mengelola inventaris barang bekas (warnet/usaha kecil) secara terstruktur.",
+      "features": [
+        "Merancang UI dan alur navigasi produk",
+        "Membangun modul input & manajemen produk (CRUD)",
+        "Membuat halaman detail produk responsif",
+        "Menyesuaikan fitur dengan kebutuhan pengguna akhir"
+      ],
+      "benefit": "Pemilik usaha bisa melacak stok barang bekas tanpa pencatatan manual — efisien & rapi.",
+      "tags": ["HTML", "CSS", "JavaScript", "PHP"],
+      "link": "https://github.com/Hanif-almasah/war_net"
+    },
+    {
+      "cat": "it",
+      "title": "Website Ko-san",
+      "badge": "Done",
+      "img": "img/ko_san.png",
+      "desc": "Aplikasi kotak saran digital yang memudahkan warga menyampaikan aspirasi secara anonim dan terstruktur.",
+      "features": [
+        "Merancang antarmuka form pengaduan ramah pengguna",
+        "Membangun halaman publik & alur submit aspirasi",
+        "Logika penyimpanan dan validasi input",
+        "Penyesuaian fitur dengan alur kerja perangkat desa"
+      ],
+      "benefit": "Perangkat desa mendapat umpan balik warga terpusat — aspirasi terekam & terukur.",
+      "tags": ["HTML", "CSS", "JavaScript", "PHP"],
+      "link": "https://github.com/Hanif-almasah"
+    },
+    {
+      "cat": "it",
+      "title": "Website Profil Sekolah",
+      "badge": "Done",
+      "img": "img/Smk_darussalam.jpg",
+      "desc": "Situs profil sekolah berbasis Laravel yang menyajikan informasi kegiatan, fasilitas, dan PPDB secara terstruktur.",
+      "features": [
+        "Setup project Laravel & struktur folder MVC",
+        "Model: Eloquent ORM untuk data sekolah, berita & pendaftaran (MySQL)",
+        "Controller: logika & routing halaman (Home, Profil, Berita, PPDB)",
+        "View: template Blade untuk tampilan dinamis & konsisten",
+        "Migration & Seeder: struktur DB & data awal sekolah"
+      ],
+      "benefit": "Sekolah punya tautan informasi resmi yang rapi untuk calon siswa & orang tua.",
+      "tags": ["Laravel", "PHP", "MySQL", "Blade"],
+      "link": "https://github.com/Hanif-almasah"
+    }
+  ],
+  "certificates": [
+    { "src": "img/Sertifikat/Siswa_terbaik.jpeg", "alt": "Siswa Terbaik", "cap": "Siswa Terbaik TKJ" },
+    { "src": "img/Sertifikat/Peringkat_3.jpeg", "alt": "Peringkat 3", "cap": "Peringkat 3 TKJ" },
+    { "src": "img/Sertifikat/Magang.jpeg", "alt": "Magang", "cap": "Magang PT DigiHerba" }
+  ]
+}
