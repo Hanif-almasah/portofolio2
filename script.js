@@ -326,6 +326,17 @@ document.addEventListener('DOMContentLoaded', function() {
         showAll();
     }
 
+    // ===== Meta Ads track-record gallery =====
+    document.querySelectorAll('.cv-track-shot').forEach(function(shot) {
+        shot.addEventListener('click', function() {
+            openPortoModal(
+                shot.dataset.src,
+                shot.dataset.caption,
+                shot.dataset.desc
+            );
+        });
+    });
+
     // ===== Project category tabs (Digital Marketing / IT) =====
     const projTabs = document.getElementById('cvProjTabs');
     const featured = document.getElementById('cvFeatured');
